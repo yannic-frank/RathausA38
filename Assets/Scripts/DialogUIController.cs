@@ -1,6 +1,10 @@
+using System;
 using System.Collections.Generic;
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.UIElements;
+using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 public delegate void DialogCommitted();
 public delegate void DialogOptionClicked(int option);
@@ -13,9 +17,27 @@ public class DialogUIController : MonoBehaviour
     private UIDocument uiDocument;
     private TextElement dialogText;
     private Dictionary<Button, int> optionButtons = new Dictionary<Button, int>();
+    private FMOD.Studio.EVENT_CALLBACK audioCallback;
+    private EventInstance audioInstance;
+    private EventReference nextAudio;
 
-    public void ShowDialog(DialogEntry entry)
+    public void EnterDialogEntry(DialogEntry entry)
     {
+        if (!entry.audio.IsNull)
+        {
+            if (audioInstance.isValid())
+            {
+                nextAudio = entry.audio;
+                StopAudio();
+            }
+            else
+            {
+                StartAudio(entry.audio);
+            }
+        }
+        
+        if (entry.text.Length == 0) return;
+        
         uiDocument.enabled = true;
         
         dialogText = uiDocument.rootVisualElement.Q<Label>("DialogText");
@@ -38,6 +60,23 @@ public class DialogUIController : MonoBehaviour
         }
         
         dialogText.text = entry.text;
+        }
+
+    public void StartAudio(EventReference audioReference)
+    {
+        if (audioInstance.isValid())
+        {
+            audioInstance.setCallback(null);
+            audioInstance.release();
+        }
+        audioInstance = FMODUnity.RuntimeManager.CreateInstance(audioReference);
+        audioInstance.start();
+        audioInstance.setCallback(audioCallback);
+    }
+
+    public void StopAudio()
+    {
+        audioInstance.stop(STOP_MODE.ALLOWFADEOUT);
     }
     
     public void HideDialog()
@@ -59,11 +98,17 @@ public class DialogUIController : MonoBehaviour
     private void OnDisable()
     {
         HideDialog();
+        StopAudio();
+        
+        audioInstance.setCallback(null);
+        audioInstance.release();
     }
 
     private void Start()
     {
         uiDocument.enabled = false;
+
+        audioCallback = new EVENT_CALLBACK(AudioEventCallback);
     }
 
     private void OptionClick(ClickEvent evt)
@@ -84,5 +129,19 @@ public class DialogUIController : MonoBehaviour
         if (!uiDocument.enabled && optionButtons.Count > 0) return;
         HideDialog();
         OnDialogCommitted.Invoke();
+    }
+    
+    [AOT.MonoPInvokeCallback(typeof(FMOD.Studio.EVENT_CALLBACK))]
+    private FMOD.RESULT AudioEventCallback(FMOD.Studio.EVENT_CALLBACK_TYPE type, IntPtr p1, IntPtr p2)
+    {
+        if (type == EVENT_CALLBACK_TYPE.STOPPED)
+        {
+            StopAudio();
+            if (!nextAudio.IsNull)
+            {
+                StartAudio(nextAudio);
+            }
+        }
+        return FMOD.RESULT.OK;
     }
 }

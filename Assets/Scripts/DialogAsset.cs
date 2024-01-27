@@ -15,8 +15,9 @@ public struct DialogOption
 [System.Serializable]
 public struct DialogEntry
 {
-    public string text;
     public DialogEntity entity;
+    public string text;
+    public FMODUnity.EventReference audio;
     public List<DialogOption> dialogOptions;
 }
 

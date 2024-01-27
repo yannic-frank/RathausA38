@@ -72,6 +72,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pair1
       objectReference: {fileID: 0}
+    - target: {fileID: 6931675502294534269, guid: a8158633aa098604e93e6c8d1502e2fa, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Keyboard&Mouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931675502294534269, guid: a8158633aa098604e93e6c8d1502e2fa, type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8276998602700991074, guid: a8158633aa098604e93e6c8d1502e2fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -112,7 +120,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6931675502294534269, guid: a8158633aa098604e93e6c8d1502e2fa, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -150,6 +159,14 @@ PrefabInstance:
     - target: {fileID: 5459007112308237563, guid: a8158633aa098604e93e6c8d1502e2fa, type: 3}
       propertyPath: m_Name
       value: Pair2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931675502294534269, guid: a8158633aa098604e93e6c8d1502e2fa, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Keyboard&Mouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931675502294534269, guid: a8158633aa098604e93e6c8d1502e2fa, type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8276998602700991074, guid: a8158633aa098604e93e6c8d1502e2fa, type: 3}
       propertyPath: m_LocalPosition.x

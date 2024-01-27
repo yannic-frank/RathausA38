@@ -7,21 +7,22 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D physics;
     public InputAction playerControls;
 
-    private PartnerMovement partnerMovement;
-
+    private PlayerInput playerInput;
 
     private Vector2 moveDirection = Vector2.zero;
 
     void Start()
     {
-        partnerMovement= GetComponent<PartnerMovement>();
+        // Get the PlayerInput component from the parent GameObject
+        playerInput = GetComponentInParent<PlayerInput>();
+
         // Enable player controls
         playerControls.Enable();
     }
 
     private void FixedUpdate()
     {
-       Move();
+        Move();
     }
 
     void OnMove(InputValue value)
@@ -31,10 +32,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-        physics.velocity = moveDirection * movementSpeed;
+        // Use the playerInput's current control scheme to get the movement input
+        Vector2 inputDirection = playerInput.actions["Move"].ReadValue<Vector2>();
+
+        physics.velocity = inputDirection * movementSpeed;
     }
 
-    
+
 
     void Update()
     {

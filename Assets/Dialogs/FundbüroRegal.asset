@@ -10,17 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7f95933e6a93744cbd7645b2e614411, type: 3}
-  m_Name: Priester
+  m_Name: "Fundb\xFCroRegal"
   m_EditorClassIdentifier: 
   sequence:
   - conditions:
-    - flag: Priester_Gebet
+    - flag: "Sekret\xE4rin_wollen_heiraten"
       enabled: 1
-    changeFlag:
+    - flag: Global_Ring
       enabled: 0
+    changeFlag:
+      enabled: 1
       value:
-        flag: 
-        enable: 0
+        flag: Global_Ring
+        enable: 1
         overridePriority:
           enabled: 0
           value: 0
@@ -28,7 +30,7 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        text: Priester im Gebet
+        text: Schwierige Wahl
         audio:
           Guid:
             Data1: 0
@@ -37,45 +39,15 @@ MonoBehaviour:
             Data4: 0
           Path: 
         dialogOptions:
-        - conditions:
-          - flag: Global_Sword
-            enabled: 0
-          text: Take Sword?
-          sequence:
-          - conditions: []
-            changeFlag:
-              enabled: 0
-              value:
-                flag: 
-                enable: 0
-                overridePriority:
-                  enabled: 0
-                  value: 0
-            dialogEntry:
-              enabled: 0
-              value:
-                entity: {fileID: 0}
-                text: 
-                audio:
-                  Guid:
-                    Data1: 0
-                    Data2: 0
-                    Data3: 0
-                    Data4: 0
-                  Path: 
-                dialogOptions: []
-            dialogAsset:
-              enabled: 1
-              value: {fileID: 11400000, guid: f1bde7d582a11b448a91cda643cd19b3, type: 2}
         - conditions: []
-          text: Let him prey
+          text: Der Ring
           sequence:
           - conditions: []
             changeFlag:
-              enabled: 0
+              enabled: 1
               value:
-                flag: 
-                enable: 0
+                flag: Ring_Gold
+                enable: 1
                 overridePriority:
                   enabled: 0
                   value: 0
@@ -93,7 +65,63 @@ MonoBehaviour:
                   Path: 
                 dialogOptions: []
             dialogAsset:
+              enabled: 0
+              value: {fileID: 0}
+        - conditions: []
+          text: Der andere Ring
+          sequence:
+          - conditions: []
+            changeFlag:
               enabled: 1
+              value:
+                flag: Ring_Play
+                enable: 1
+                overridePriority:
+                  enabled: 0
+                  value: 0
+            dialogEntry:
+              enabled: 0
+              value:
+                entity: {fileID: 0}
+                text: 
+                audio:
+                  Guid:
+                    Data1: 0
+                    Data2: 0
+                    Data3: 0
+                    Data4: 0
+                  Path: 
+                dialogOptions: []
+            dialogAsset:
+              enabled: 0
+              value: {fileID: 0}
+        - conditions: []
+          text: Der eine Ring
+          sequence:
+          - conditions: []
+            changeFlag:
+              enabled: 1
+              value:
+                flag: Ring_Frodo
+                enable: 1
+                overridePriority:
+                  enabled: 0
+                  value: 0
+            dialogEntry:
+              enabled: 0
+              value:
+                entity: {fileID: 0}
+                text: 
+                audio:
+                  Guid:
+                    Data1: 0
+                    Data2: 0
+                    Data3: 0
+                    Data4: 0
+                  Path: 
+                dialogOptions: []
+            dialogAsset:
+              enabled: 0
               value: {fileID: 0}
     dialogAsset:
       enabled: 0

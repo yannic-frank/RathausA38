@@ -8,6 +8,7 @@ public class PairManager : MonoBehaviour
 
     public GameObject active;
 
+    public PlayerInput playerInput;
     public DialogUIController uiController;
 
     private bool movementEnabled = true;
@@ -15,6 +16,7 @@ public class PairManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (playerInput == null) playerInput = FindObjectOfType<PlayerInput>();
         if (uiController == null) uiController = FindObjectOfType<DialogUIController>();
         
         active = pair1;
@@ -107,9 +109,17 @@ public class PairManager : MonoBehaviour
         }
     }
 
-    public void SetInputEnabled(bool enable)
+    public void SetUIInput(bool enable)
     {
-        movementEnabled = enable;
-        active.GetComponent<PlayerMovement>().enabled = enable;
+        movementEnabled = !enable;
+        active.GetComponent<PlayerMovement>().enabled = !enable;
+        if (enable)
+        {
+            playerInput.SwitchCurrentActionMap("UI");
+        }
+        else
+        {
+            playerInput.SwitchCurrentActionMap("Player");
+        }
     }
 }

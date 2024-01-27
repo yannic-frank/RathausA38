@@ -7,6 +7,7 @@ using UnityEngine;
 [System.Serializable]
 public struct DialogOption
 {
+    public List<DialogCondition> conditions;
     public string text;
     public List<DialogSequenceEntry> sequence;
 }

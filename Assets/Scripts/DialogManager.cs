@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +8,13 @@ public delegate void FlagChanged(string flag, bool set, Optional<int> priority);
 
 public class DialogManager : MonoBehaviour
 {
+    public FlagChanged OnFlagChanged;
+
+    public PairManager pairManager;
+    public DialogUIController dialogUIController;
+    
     private Stack<List<DialogSequenceEntry>> sequence = new Stack<List<DialogSequenceEntry>>();
     private DialogEntry? currentEntry;
-    
-    public FlagChanged OnFlagChanged;
-    
     private Dictionary<string, Optional<int>> flags = new Dictionary<string, Optional<int>>();
 
     public bool HasFlag(string flag)
@@ -41,9 +44,20 @@ public class DialogManager : MonoBehaviour
         sequence.Push(dialog.sequence);
         if (currentEntry == null) NextDialog();
     }
-    
-    public void DialogResponse(int optionIndex)
+
+    private void Start()
     {
+        if (pairManager == null) pairManager = FindObjectOfType<PairManager>();
+        if (dialogUIController == null) dialogUIController = FindObjectOfType<DialogUIController>();
+
+        dialogUIController.OnDialogCommitted += DialogUICommitted;
+        dialogUIController.OnDialogOptionClicked += DialogUIOption;
+    }
+
+    private void DialogUIOption(int optionIndex)
+    {
+        pairManager.SetInputEnabled(true);
+        
         if (currentEntry.HasValue)
         {
             DialogOption option = currentEntry.Value.dialogOptions[optionIndex];
@@ -52,12 +66,23 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    public void NextDialog()
+    private void DialogUICommitted()
+    {
+        pairManager.SetInputEnabled(true);
+        
+        NextDialog();
+    }
+
+    private void NextDialog()
     {
         List<DialogSequenceEntry> entries;
         while (sequence.TryPeek(out entries))
         {
-            if (entries.Count < 1) continue;
+            if (entries.Count < 1)
+            {
+                sequence.Pop();
+                continue;
+            }
             
             DialogSequenceEntry entry = entries[0];
             entries.RemoveAt(0);
@@ -84,8 +109,9 @@ public class DialogManager : MonoBehaviour
         if (entry.dialogEntry.Enabled)
         {
             currentEntry = entry.dialogEntry.Value;
-            
-            // Show Current Entry
+
+            pairManager.SetInputEnabled(false);
+            dialogUIController.ShowDialog(currentEntry.Value);
         }
         else
         {

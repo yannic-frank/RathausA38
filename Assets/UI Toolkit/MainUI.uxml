@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:GroupBox style="justify-content: space-around; flex-grow: 1;">
+        <ui:GroupBox style="flex-grow: 1;">
+            <ui:Label tabindex="-1" text="Some Sample Dialog Text." parse-escape-sequences="true" display-tooltip-when-elided="true" name="DialogText" style="width: 100%; height: 203px; flex-grow: 1;" />
+        </ui:GroupBox>
+        <ui:GroupBox style="flex-direction: column; flex-wrap: nowrap; justify-content: flex-end; align-items: stretch; width: auto; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+            <ui:GroupBox style="flex-direction: row; justify-content: space-around; align-items: auto; align-self: auto;">
+                <ui:Button text="Option 1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Option1" style="align-items: auto; align-self: stretch; width: auto; flex-grow: 1;" />
+                <ui:Button text="Option 2" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Option2" style="flex-grow: 1;" />
+            </ui:GroupBox>
+            <ui:GroupBox style="flex-direction: row; justify-content: space-around; align-items: auto;">
+                <ui:Button text="Option 3" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Option3" style="flex-grow: 1;" />
+                <ui:Button text="Optioni 4" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Option4" style="flex-grow: 1;" />
+            </ui:GroupBox>
+        </ui:GroupBox>
+    </ui:GroupBox>
+</ui:UXML>

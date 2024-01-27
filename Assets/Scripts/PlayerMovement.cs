@@ -32,10 +32,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-        // Use the playerInput's current control scheme to get the movement input
-        Vector2 inputDirection = playerInput.actions["Move"].ReadValue<Vector2>();
+        if (playerInput)
+        {
+            // Use the playerInput's current control scheme to get the movement input
+            Vector2 inputDirection = playerInput.actions["Move"].ReadValue<Vector2>();
 
-        physics.velocity = inputDirection * movementSpeed;
+            physics.velocity = inputDirection * movementSpeed;
+        }
     }
 
 

@@ -13,6 +13,24 @@ MonoBehaviour:
   m_Name: Intro
   m_EditorClassIdentifier: 
   sequence:
+  - conditions: []
+    changeFlag:
+      enabled: 1
+      value:
+        flag: Restart_Reset_Position
+        enable: 0
+        overridePriority:
+          enabled: 0
+          value: 0
+    dialogEntry:
+      enabled: 0
+      value:
+        text: 
+        entity: {fileID: 0}
+        dialogOptions: []
+    dialogAsset:
+      enabled: 0
+      value: {fileID: 0}
   - conditions:
     - flag: Global_Agent
       enabled: 0
@@ -92,8 +110,6 @@ MonoBehaviour:
   - conditions:
     - flag: Global_Agent
       enabled: 1
-    - flag: Global_Sword
-      enabled: 0
     changeFlag:
       enabled: 0
       value:

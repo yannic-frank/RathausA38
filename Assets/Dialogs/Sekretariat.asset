@@ -10,70 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7f95933e6a93744cbd7645b2e614411, type: 3}
-  m_Name: Ausgang
+  m_Name: Sekretariat
   m_EditorClassIdentifier: 
   sequence:
   - conditions:
-    - flag: Ausgang_hinaus_1
+    - flag: Global_Agent_Or_Sword
       enabled: 0
-    changeFlag:
-      enabled: 1
-      value:
-        flag: Ausgang_hinaus_1
-        enable: 1
-        overridePriority:
-          enabled: 0
-          value: 0
-    dialogEntry:
-      enabled: 1
-      value:
-        text: 
-        entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        dialogOptions: []
-    dialogAsset:
-      enabled: 0
-      value: {fileID: 0}
-  - conditions:
-    - flag: Ausgang_hinaus_1
-      enabled: 1
-    changeFlag:
-      enabled: 1
-      value:
-        flag: Ausgang_hinaus_1
-        enable: 0
-        overridePriority:
-          enabled: 0
-          value: 0
-    dialogEntry:
-      enabled: 1
-      value:
-        text: 
-        entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        dialogOptions: []
-    dialogAsset:
-      enabled: 0
-      value: {fileID: 0}
-  - conditions:
-    - flag: Ausgang_hinaus_1
-      enabled: 1
-    changeFlag:
-      enabled: 1
-      value:
-        flag: Ausgang_hinaus_1
-        enable: 0
-        overridePriority:
-          enabled: 0
-          value: 0
-    dialogEntry:
-      enabled: 1
-      value:
-        text: 
-        entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        dialogOptions: []
-    dialogAsset:
-      enabled: 0
-      value: {fileID: 0}
-  - conditions: []
     changeFlag:
       enabled: 0
       value:
@@ -83,11 +25,31 @@ MonoBehaviour:
           enabled: 0
           value: 0
     dialogEntry:
-      enabled: 0
+      enabled: 1
       value:
         text: 
-        entity: {fileID: 0}
+        entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
         dialogOptions: []
     dialogAsset:
+      enabled: 0
+      value: {fileID: 0}
+  - conditions:
+    - flag: Global_Agent_Or_Sword
       enabled: 1
-      value: {fileID: 11400000, guid: e31683a56cdd9cc46b40be4aaee44358, type: 2}
+    changeFlag:
+      enabled: 0
+      value:
+        flag: 
+        enable: 0
+        overridePriority:
+          enabled: 0
+          value: 0
+    dialogEntry:
+      enabled: 1
+      value:
+        text: 
+        entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
+        dialogOptions: []
+    dialogAsset:
+      enabled: 0
+      value: {fileID: 0}

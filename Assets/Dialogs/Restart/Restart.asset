@@ -25,8 +25,40 @@ MonoBehaviour:
     dialogEntry:
       enabled: 0
       value:
-        text: 
         entity: {fileID: 0}
+        text: 
+        audio:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        dialogOptions: []
+    dialogAsset:
+      enabled: 0
+      value: {fileID: 0}
+  - conditions: []
+    changeFlag:
+      enabled: 1
+      value:
+        flag: "Sekret\xE4rin_wollen_heiraten"
+        enable: 0
+        overridePriority:
+          enabled: 0
+          value: 0
+    dialogEntry:
+      enabled: 0
+      value:
+        entity: {fileID: 0}
+        text: 
+        audio:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
         dialogOptions: []
     dialogAsset:
       enabled: 0

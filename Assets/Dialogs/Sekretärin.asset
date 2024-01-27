@@ -25,9 +25,165 @@ MonoBehaviour:
     dialogEntry:
       enabled: 1
       value:
-        text: 
-        entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        dialogOptions: []
+        entity: {fileID: 11400000, guid: 20eb0d5d39f54474894e2a34eeaf9e49, type: 2}
+        text: Was wollt ihr?
+        audio:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        dialogOptions:
+        - conditions: []
+          text: "B\xFCrgermeister!"
+          sequence:
+          - conditions:
+            - flag: Global_Agent
+              enabled: 0
+            changeFlag:
+              enabled: 1
+              value:
+                flag: Global_Agent
+                enable: 1
+                overridePriority:
+                  enabled: 0
+                  value: 0
+            dialogEntry:
+              enabled: 1
+              value:
+                entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
+                text: Audienz abgelehnt!
+                audio:
+                  Guid:
+                    Data1: 0
+                    Data2: 0
+                    Data3: 0
+                    Data4: 0
+                  Path: 
+                dialogOptions: []
+            dialogAsset:
+              enabled: 1
+              value: {fileID: 11400000, guid: e31683a56cdd9cc46b40be4aaee44358, type: 2}
+        - conditions:
+          - flag: "Sekret\xE4rin_wollen_heiraten"
+            enabled: 0
+          text: Heiraten!
+          sequence:
+          - conditions: []
+            changeFlag:
+              enabled: 1
+              value:
+                flag: "Sekret\xE4rin_wollen_heiraten"
+                enable: 1
+                overridePriority:
+                  enabled: 0
+                  value: 0
+            dialogEntry:
+              enabled: 0
+              value:
+                entity: {fileID: 0}
+                text: 
+                audio:
+                  Guid:
+                    Data1: 0
+                    Data2: 0
+                    Data3: 0
+                    Data4: 0
+                  Path: 
+                dialogOptions: []
+            dialogAsset:
+              enabled: 0
+              value: {fileID: 0}
+    dialogAsset:
+      enabled: 0
+      value: {fileID: 0}
+  - conditions:
+    - flag: Global_Agent
+      enabled: 1
+    - flag: "Sekret\xE4rin_wollen_heiraten"
+      enabled: 1
+    changeFlag:
+      enabled: 0
+      value:
+        flag: 
+        enable: 0
+        overridePriority:
+          enabled: 0
+          value: 0
+    dialogEntry:
+      enabled: 1
+      value:
+        entity: {fileID: 11400000, guid: 20eb0d5d39f54474894e2a34eeaf9e49, type: 2}
+        text: Idle Message
+        audio:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        dialogOptions:
+        - conditions: []
+          text: "B\xFCrgermeister!"
+          sequence:
+          - conditions:
+            - flag: Global_Agent
+              enabled: 0
+            changeFlag:
+              enabled: 1
+              value:
+                flag: Global_Agent
+                enable: 1
+                overridePriority:
+                  enabled: 0
+                  value: 0
+            dialogEntry:
+              enabled: 1
+              value:
+                entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
+                text: Audienz abgelehnt!
+                audio:
+                  Guid:
+                    Data1: 0
+                    Data2: 0
+                    Data3: 0
+                    Data4: 0
+                  Path: 
+                dialogOptions: []
+            dialogAsset:
+              enabled: 1
+              value: {fileID: 11400000, guid: e31683a56cdd9cc46b40be4aaee44358, type: 2}
+        - conditions:
+          - flag: "Sekret\xE4rin_wollen_heiraten"
+            enabled: 0
+          text: Heiraten!
+          sequence:
+          - conditions: []
+            changeFlag:
+              enabled: 1
+              value:
+                flag: "Sekret\xE4rin_wollen_heiraten"
+                enable: 1
+                overridePriority:
+                  enabled: 0
+                  value: 0
+            dialogEntry:
+              enabled: 0
+              value:
+                entity: {fileID: 0}
+                text: 
+                audio:
+                  Guid:
+                    Data1: 0
+                    Data2: 0
+                    Data3: 0
+                    Data4: 0
+                  Path: 
+                dialogOptions: []
+            dialogAsset:
+              enabled: 0
+              value: {fileID: 0}
     dialogAsset:
       enabled: 0
       value: {fileID: 0}

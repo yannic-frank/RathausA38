@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequence:
   - conditions:
-    - flag: Ausgang_hinaus_1
-      enabled: 0
+    - flag: Rnd_Outtro_1
+      enabled: 1
     changeFlag:
       enabled: 1
       value:
-        flag: Ausgang_hinaus_1
+        flag: 
         enable: 1
         overridePriority:
           enabled: 0
@@ -28,7 +28,7 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        text: "M\xE4rchenende"
+        text: 'Ende: Heimgehen, Psychotherapie'
         audio:
           Guid:
             Data1: 0
@@ -41,12 +41,12 @@ MonoBehaviour:
       enabled: 0
       value: {fileID: 0}
   - conditions:
-    - flag: Ausgang_hinaus_1
+    - flag: Rnd_Outtro_1
       enabled: 1
     changeFlag:
-      enabled: 1
+      enabled: 0
       value:
-        flag: Ausgang_hinaus_1
+        flag: 
         enable: 0
         overridePriority:
           enabled: 0
@@ -55,7 +55,7 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        text: "Rasenm\xE4her"
+        text: "Ende: Rasenm\xE4her, Totengr\xE4ber"
         audio:
           Guid:
             Data1: 0

@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequence:
   - conditions:
-    - flag: "Sekret\xE4rin_wollen_heiraten"
-      enabled: 1
     - flag: Global_Ring
       enabled: 0
     changeFlag:

@@ -40,7 +40,7 @@ MonoBehaviour:
         - conditions:
           - flag: Global_Sword
             enabled: 0
-          text: Take Sword?
+          text: Take Flowers?
           sequence:
           - conditions: []
             changeFlag:

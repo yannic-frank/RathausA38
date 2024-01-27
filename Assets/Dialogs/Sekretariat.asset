@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequence:
   - conditions:
-    - flag: Global_Agent_Or_Sword
+    - flag: Sekretariat_1
       enabled: 0
     changeFlag:
-      enabled: 0
+      enabled: 1
       value:
-        flag: 
-        enable: 0
+        flag: Sekretariat_1
+        enable: 1
         overridePriority:
           enabled: 0
           value: 0
@@ -29,33 +29,6 @@ MonoBehaviour:
       value:
         entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
         text: Sekretariat
-        audio:
-          Guid:
-            Data1: 0
-            Data2: 0
-            Data3: 0
-            Data4: 0
-          Path: 
-        dialogOptions: []
-    dialogAsset:
-      enabled: 0
-      value: {fileID: 0}
-  - conditions:
-    - flag: Global_Agent_Or_Sword
-      enabled: 1
-    changeFlag:
-      enabled: 0
-      value:
-        flag: 
-        enable: 0
-        overridePriority:
-          enabled: 0
-          value: 0
-    dialogEntry:
-      enabled: 1
-      value:
-        entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        text: Sekretariat Agent
         audio:
           Guid:
             Data1: 0

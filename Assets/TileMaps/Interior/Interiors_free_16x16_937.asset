@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Interiors_free_16x16_937
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -2138175675, guid: 5164f4062e2192942b0f3ef248cc7a14, type: 3}
+  m_Sprite: {fileID: 1644956407, guid: 5164f4062e2192942b0f3ef248cc7a14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

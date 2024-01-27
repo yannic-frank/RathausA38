@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [System.Serializable]
@@ -14,13 +15,14 @@ public struct DialogOption
 public struct DialogEntry
 {
     public string text;
+    public DialogEntity entity;
     public List<DialogOption> dialogOptions;
 }
 
 [System.Serializable]
 public struct ChangeFlag
 {
-    public FlagContainer flagContainer;
+    [DoNotSerialize]
     public string flag;
     public bool enable;
     public Optional<int> overridePriority;

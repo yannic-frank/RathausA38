@@ -14,72 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequence:
   - dialogEntry:
-      enabled: 1
+      enabled: 0
       value:
-        text: gjabvguaqebjhgbvqjhwhqebjhbajlhbafklhbasfhlbf,jhasefj
+        text: 
+        entity: {fileID: 0}
         dialogOptions: []
     dialogAsset:
       enabled: 0
       value: {fileID: 0}
     changeFlag:
-      enabled: 0
-      value:
-        flagContainer: {fileID: 0}
-        flag: 
-        enable: 0
-        overridePriority:
-          enabled: 0
-          value: 0
-  - dialogEntry:
       enabled: 1
       value:
-        text: kahsdbkjasbngkjabsdfgkhbasfgkjadsfg
-        dialogOptions:
-        - text: asughawhfgvasfj
-          sequence:
-          - dialogEntry:
-              enabled: 0
-              value:
-                text: as.khgbaelkhbagjfdope
-                dialogOptions: []
-            dialogAsset:
-              enabled: 0
-              value: {fileID: 0}
-            changeFlag:
-              enabled: 1
-              value:
-                flagContainer: {fileID: 0}
-                flag: asdfghasbvg
-                enable: 0
-                overridePriority:
-                  enabled: 0
-                  value: 0
-          - dialogEntry:
-              enabled: 0
-              value:
-                text: as.khgbaelkhbagjfdope
-                dialogOptions: []
-            dialogAsset:
-              enabled: 0
-              value: {fileID: 0}
-            changeFlag:
-              enabled: 1
-              value:
-                flagContainer: {fileID: 0}
-                flag: asdfghasbvg
-                enable: 0
-                overridePriority:
-                  enabled: 0
-                  value: 0
-    dialogAsset:
-      enabled: 0
-      value: {fileID: 0}
-    changeFlag:
-      enabled: 0
-      value:
-        flagContainer: {fileID: 0}
-        flag: 
-        enable: 0
+        flag: meep
+        enable: 1
         overridePriority:
           enabled: 0
           value: 0

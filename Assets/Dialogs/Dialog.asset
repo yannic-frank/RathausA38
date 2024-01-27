@@ -12,5 +12,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7f95933e6a93744cbd7645b2e614411, type: 3}
   m_Name: Dialog
   m_EditorClassIdentifier: 
-  text: "algkekjgbekjbgkaejrbgvkjebrbk\xF6wjenrbgjn"
-  nextDialog: []
+  sequence:
+  - dialogEntry:
+      enabled: 1
+      value:
+        text: gjabvguaqebjhgbvqjhwhqebjhbajlhbafklhbasfhlbf,jhasefj
+        dialogOptions: []
+    dialogAsset:
+      enabled: 0
+      value: {fileID: 0}
+    changeFlag:
+      enabled: 0
+      value:
+        flagContainer: {fileID: 0}
+        flag: 
+        enable: 0
+        overridePriority:
+          enabled: 0
+          value: 0
+  - dialogEntry:
+      enabled: 1
+      value:
+        text: kahsdbkjasbngkjabsdfgkhbasfgkjadsfg
+        dialogOptions:
+        - text: asughawhfgvasfj
+          sequence:
+          - dialogEntry:
+              enabled: 0
+              value:
+                text: as.khgbaelkhbagjfdope
+                dialogOptions: []
+            dialogAsset:
+              enabled: 0
+              value: {fileID: 0}
+            changeFlag:
+              enabled: 1
+              value:
+                flagContainer: {fileID: 0}
+                flag: asdfghasbvg
+                enable: 0
+                overridePriority:
+                  enabled: 0
+                  value: 0
+          - dialogEntry:
+              enabled: 0
+              value:
+                text: as.khgbaelkhbagjfdope
+                dialogOptions: []
+            dialogAsset:
+              enabled: 0
+              value: {fileID: 0}
+            changeFlag:
+              enabled: 1
+              value:
+                flagContainer: {fileID: 0}
+                flag: asdfghasbvg
+                enable: 0
+                overridePriority:
+                  enabled: 0
+                  value: 0
+    dialogAsset:
+      enabled: 0
+      value: {fileID: 0}
+    changeFlag:
+      enabled: 0
+      value:
+        flagContainer: {fileID: 0}
+        flag: 
+        enable: 0
+        overridePriority:
+          enabled: 0
+          value: 0

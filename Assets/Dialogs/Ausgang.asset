@@ -33,3 +33,23 @@ MonoBehaviour:
     dialogAsset:
       enabled: 0
       value: {fileID: 0}
+  - conditions:
+    - flag: Ausgang_hinaus_1
+      enabled: 1
+    changeFlag:
+      enabled: 0
+      value:
+        flag: 
+        enable: 0
+        overridePriority:
+          enabled: 0
+          value: 0
+    dialogEntry:
+      enabled: 1
+      value:
+        text: 
+        entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
+        dialogOptions: []
+    dialogAsset:
+      enabled: 0
+      value: {fileID: 0}

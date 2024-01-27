@@ -40,8 +40,8 @@ public class PartnerMovement : MonoBehaviour
             // Calculate the new position with the desired distance
             Vector2 newPosition = targetPosition - direction * distanceToPartner;
 
-            // Set the position directly without smoothing
-            physics.position = newPosition;
+            // Move the Rigidbody2D to the new position
+            physics.MovePosition(newPosition);
         }
     }
 }

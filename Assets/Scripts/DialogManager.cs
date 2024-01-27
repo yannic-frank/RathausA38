@@ -41,6 +41,7 @@ public class DialogManager : MonoBehaviour
 
     public void EnterDialog(DialogAsset dialog)
     {
+        if (dialog == null) return;
         sequence.Push(new List<DialogSequenceEntry>(dialog.sequence));
         if (currentEntry == null) NextDialog();
     }

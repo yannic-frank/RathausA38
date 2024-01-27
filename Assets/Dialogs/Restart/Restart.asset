@@ -63,3 +63,103 @@ MonoBehaviour:
     dialogAsset:
       enabled: 0
       value: {fileID: 0}
+  - conditions: []
+    changeFlag:
+      enabled: 1
+      value:
+        flag: "Fundb\xFCro_1"
+        enable: 0
+        overridePriority:
+          enabled: 0
+          value: 0
+    dialogEntry:
+      enabled: 0
+      value:
+        entity: {fileID: 0}
+        text: 
+        audio:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        dialogOptions: []
+    dialogAsset:
+      enabled: 0
+      value: {fileID: 0}
+  - conditions: []
+    changeFlag:
+      enabled: 1
+      value:
+        flag: Besenkammer_1
+        enable: 0
+        overridePriority:
+          enabled: 0
+          value: 0
+    dialogEntry:
+      enabled: 0
+      value:
+        entity: {fileID: 0}
+        text: 
+        audio:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        dialogOptions: []
+    dialogAsset:
+      enabled: 0
+      value: {fileID: 0}
+  - conditions: []
+    changeFlag:
+      enabled: 1
+      value:
+        flag: Kapelle_1
+        enable: 0
+        overridePriority:
+          enabled: 0
+          value: 0
+    dialogEntry:
+      enabled: 0
+      value:
+        entity: {fileID: 0}
+        text: 
+        audio:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        dialogOptions: []
+    dialogAsset:
+      enabled: 0
+      value: {fileID: 0}
+  - conditions: []
+    changeFlag:
+      enabled: 1
+      value:
+        flag: Priester_Gebet
+        enable: 1
+        overridePriority:
+          enabled: 0
+          value: 0
+    dialogEntry:
+      enabled: 0
+      value:
+        entity: {fileID: 0}
+        text: 
+        audio:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        dialogOptions: []
+    dialogAsset:
+      enabled: 0
+      value: {fileID: 0}

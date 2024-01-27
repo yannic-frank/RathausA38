@@ -1,10 +1,5 @@
-using System;
-using System.Collections; 
-using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Vector2 = UnityEngine.Vector2;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,21 +7,21 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D physics;
     public InputAction playerControls;
 
+    private PartnerMovement partnerMovement;
+
+
     private Vector2 moveDirection = Vector2.zero;
-    
+
     void Start()
     {
-        
-    }
-
-    void Update()
-    {
-        
+        partnerMovement= GetComponent<PartnerMovement>();
+        // Enable player controls
+        playerControls.Enable();
     }
 
     private void FixedUpdate()
     {
-        Move();
+       Move();
     }
 
     void OnMove(InputValue value)
@@ -36,7 +31,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-        //physics.AddForce(moveDirection * movementSpeed);
         physics.velocity = moveDirection * movementSpeed;
+    }
+
+    
+
+    void Update()
+    {
+      
     }
 }

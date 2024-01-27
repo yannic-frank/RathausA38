@@ -42,10 +42,10 @@ MonoBehaviour:
             - flag: Global_Agent
               enabled: 0
             changeFlag:
-              enabled: 1
+              enabled: 0
               value:
-                flag: Global_Agent
-                enable: 1
+                flag: 
+                enable: 0
                 overridePriority:
                   enabled: 0
                   value: 0
@@ -64,7 +64,7 @@ MonoBehaviour:
                 dialogOptions: []
             dialogAsset:
               enabled: 1
-              value: {fileID: 11400000, guid: e31683a56cdd9cc46b40be4aaee44358, type: 2}
+              value: {fileID: 11400000, guid: 7acfb02f0e91f8248a8d4e547da38835, type: 2}
         - conditions:
           - flag: "Sekret\xE4rin_wollen_heiraten"
             enabled: 0

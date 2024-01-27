@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f95933e6a93744cbd7645b2e614411, type: 3}
+  m_Name: Sword
+  m_EditorClassIdentifier: 
+  sequence:
+  - conditions: []
+    changeFlag:
+      enabled: 1
+      value:
+        flag: Global_Sword
+        enable: 1
+        overridePriority:
+          enabled: 0
+          value: 0
+    dialogEntry:
+      enabled: 0
+      value:
+        entity: {fileID: 0}
+        text: 
+        audio:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        dialogOptions: []
+    dialogAsset:
+      enabled: 0
+      value: {fileID: 0}
+  - conditions: []
+    changeFlag:
+      enabled: 1
+      value:
+        flag: Global_Agent_Or_Sword
+        enable: 1
+        overridePriority:
+          enabled: 0
+          value: 0
+    dialogEntry:
+      enabled: 0
+      value:
+        entity: {fileID: 0}
+        text: 
+        audio:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        dialogOptions: []
+    dialogAsset:
+      enabled: 0
+      value: {fileID: 0}

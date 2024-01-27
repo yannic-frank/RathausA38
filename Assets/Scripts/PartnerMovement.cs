@@ -7,7 +7,7 @@ public class PartnerMovement : MonoBehaviour
 {
 
     public float distanceToPartner = 1.5f;
-    public float movementSpeed = 1.0f;
+    public float movementSpeed = 10.0f;
     public Rigidbody2D physics;
 
     public GameObject partner;
@@ -33,20 +33,15 @@ public class PartnerMovement : MonoBehaviour
         if (partner != null)
         {
             Vector2 targetPosition = partner.transform.position;
-            Vector2 currentPosition = transform.position;
 
             // Calculate the direction from the current position to the target position
-            Vector2 direction = (targetPosition - currentPosition).normalized;
+            Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
 
             // Calculate the new position with the desired distance
             Vector2 newPosition = targetPosition - direction * distanceToPartner;
 
-            // Apply damping to smooth out the movement
-            float damping = 0.2f; // Adjust this value to control the speed of the movement
-            Vector2 smoothedPosition = Vector2.Lerp(currentPosition, newPosition, damping);
-
-            // Move towards the smoothed position with a speed close to player movement speed
-            physics.velocity = (smoothedPosition - currentPosition).normalized * 1.0f;
+            // Move the Rigidbody2D to the new position
+            physics.MovePosition(newPosition);
         }
     }
 }

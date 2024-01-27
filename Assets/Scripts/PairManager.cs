@@ -12,6 +12,7 @@ public class PairManager : MonoBehaviour
     void Start()
     {
         active = pair1;
+        SetCameraTarget(pair1.transform);
         pair1.GetComponent<PartnerMovement>().partner = pair2;
         pair2.GetComponent<PartnerMovement>().partner = pair1;
 

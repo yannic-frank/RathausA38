@@ -7,13 +7,13 @@ public class PairManager : MonoBehaviour
     public GameObject pair2;
 
     public GameObject active;
+    private PlayerMovement activeMovement;
 
     public PlayerInput playerInput;
     public DialogUIController uiController;
 
     private bool movementEnabled = true;
 
-    // Start is called before the first frame update
     void Start()
     {
         if (playerInput == null) playerInput = FindObjectOfType<PlayerInput>();
@@ -28,17 +28,11 @@ public class PairManager : MonoBehaviour
         DeactivatePair(pair2);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Toggle active pair with Tab key
-        if (Keyboard.current.tabKey.wasPressedThisFrame)
-        {
-            ToggleActive();
-        }
     }
 
-    void ToggleActive()
+    void OnToggleActive()
     {
         if (!movementEnabled) return;
         
@@ -58,15 +52,43 @@ public class PairManager : MonoBehaviour
         uiController.OnDialogCommit();
     }
 
+    public void OnOption1()
+    {
+        uiController.CommitOption(0);
+    }
+    
+    public void OnOption2()
+    {
+        uiController.CommitOption(1);
+    }
+    
+    public void OnOption3()
+    {
+        uiController.CommitOption(2);
+    }
+    
+    public void OnOption4()
+    {
+        uiController.CommitOption(4);
+    }
+    
+    public void OnMove(InputValue value)
+    {
+        if (activeMovement)
+        {
+            activeMovement.OnMove(value);
+        }
+    }
+
     void ActivatePair(GameObject pair)
     {
         if (pair != null)
         {
             // Activate PlayerMovement script
-            PlayerMovement playerMovement = pair.GetComponent<PlayerMovement>();
-            if (playerMovement != null)
+            activeMovement = pair.GetComponent<PlayerMovement>();
+            if (activeMovement != null)
             {
-                playerMovement.enabled = true;
+                activeMovement.enabled = true;
             }
 
             // Deactivate PartnerMovement script

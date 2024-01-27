@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
@@ -14,6 +15,11 @@ public struct Optional<T>
     {
         enabled = true;
         value = initialValue;
+    }
+
+    public bool IsEqual(Optional<T> other)
+    {
+        return Enabled == other.enabled && (!other.enabled || EqualityComparer<T>.Default.Equals(Value, other.Value));
     }
 }
 

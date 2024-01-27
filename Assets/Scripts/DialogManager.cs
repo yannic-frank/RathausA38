@@ -12,11 +12,14 @@ public class DialogManager : MonoBehaviour
 
     public PairManager pairManager;
     public DialogUIController dialogUIController;
+    public GameObject pairStart;
+
+    public DialogAsset startupDialog;
     
     private Stack<List<DialogSequenceEntry>> sequence = new Stack<List<DialogSequenceEntry>>();
     private DialogEntry? currentEntry;
     private Dictionary<string, Optional<int>> flags = new Dictionary<string, Optional<int>>();
-
+    
     public bool HasFlag(string flag)
     {
         return flags.ContainsKey(flag);
@@ -29,6 +32,9 @@ public class DialogManager : MonoBehaviour
 
     public void SetFlag(string flag, bool set, Optional<int> priority)
     {
+        Optional<int> prevPriority;
+        if (flags.TryGetValue(flag, out prevPriority) == set && (!set || prevPriority.Equals(priority))) return;
+        
         if (set)
         {
             flags[flag] = priority;
@@ -37,6 +43,8 @@ public class DialogManager : MonoBehaviour
         {
             flags.Remove(flag);
         }
+        
+        OnFlagChanged.Invoke(flag, set, priority);
     }
 
     public void EnterDialog(DialogAsset dialog)
@@ -53,6 +61,39 @@ public class DialogManager : MonoBehaviour
 
         dialogUIController.OnDialogCommitted += DialogUICommitted;
         dialogUIController.OnDialogOptionClicked += DialogUIOption;
+
+        OnFlagChanged += FlagChanged;
+        
+        Invoke("RestartGame", 0);
+    }
+
+    public void RestartGame()
+    {
+        if (pairStart)
+        {
+            GameObject current = pairManager.active;
+            GameObject other = pairManager.pair2;
+            if (current == pairManager.pair2)
+            {
+                other = pairManager.pair1;
+            }
+
+            Vector3 startPosition = pairStart.transform.position;
+            current.transform.position = startPosition;
+            other.transform.position = startPosition + new Vector3(1.5f,0);
+        }
+        
+        EnterDialog(startupDialog);
+    }
+
+    private void FlagChanged(string flag, bool set, Optional<int> priority)
+    {
+        if (flag == "restart")
+        {
+            SetFlag(flag, false, new Optional<int>());
+            
+            RestartGame();
+        }
     }
 
     private void DialogUIOption(int optionIndex)

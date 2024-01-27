@@ -41,6 +41,7 @@ public class DialogUIController : MonoBehaviour
         uiDocument.enabled = true;
         
         dialogText = uiDocument.rootVisualElement.Q<Label>("DialogText");
+        dialogText.RegisterCallback<ClickEvent>(DialogTextClick);
         for (int i = 0; i < 4; ++i)
         {
             Button button = uiDocument.rootVisualElement.Q("Option" + (i + 1)) as Button;
@@ -119,14 +120,25 @@ public class DialogUIController : MonoBehaviour
         int option;
         if (button != null && optionButtons.TryGetValue(button, out option))
         {
-            HideDialog();
-            OnDialogOptionClicked.Invoke(option);
+            CommitOption(option);
         }
+    }
+
+    private void DialogTextClick(ClickEvent evt)
+    {
+        OnDialogCommit();
+    }
+
+    public void CommitOption(int option)
+    {
+        if (!uiDocument.enabled || optionButtons.Count == 0) return;
+        HideDialog();
+        OnDialogOptionClicked.Invoke(option);
     }
 
     public void OnDialogCommit()
     {
-        if (!uiDocument.enabled && optionButtons.Count > 0) return;
+        if (!uiDocument.enabled || optionButtons.Count > 0) return;
         HideDialog();
         OnDialogCommitted.Invoke();
     }

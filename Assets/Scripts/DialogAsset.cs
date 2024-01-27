@@ -40,9 +40,9 @@ public struct DialogCondition
 public class DialogSequenceEntry
 {
     public List<DialogCondition> conditions;
+    public Optional<ChangeFlag> changeFlag;
     public Optional<DialogEntry> dialogEntry;
     public Optional<DialogAsset> dialogAsset;
-    public Optional<ChangeFlag> changeFlag;
 }
 
 [CreateAssetMenu(fileName = "Dialog", menuName = "ScriptableObjects/DialogAsset", order = 1)]

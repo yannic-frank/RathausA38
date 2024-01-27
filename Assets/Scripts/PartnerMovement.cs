@@ -40,8 +40,21 @@ public class PartnerMovement : MonoBehaviour
             // Calculate the new position with the desired distance
             Vector2 newPosition = targetPosition - direction * distanceToPartner;
 
-            // Move the Rigidbody2D to the new position
-            physics.MovePosition(newPosition);
+            // Check if the distance to the target is more than double distanceToPartner
+            float distanceToTarget = Vector2.Distance(transform.position, targetPosition);
+            float doubleDistanceToPartner = distanceToPartner;
+
+            if (distanceToTarget > doubleDistanceToPartner)
+            {
+                // Smoothly interpolate the Rigidbody2D position towards the new position
+                float smoothingFactor = 0.1f; // Adjust this value for desired smoothness
+                Vector2 smoothedPosition = Vector2.Lerp(transform.position, newPosition, smoothingFactor);
+
+                // Move the Rigidbody2D to the smoothed position
+                physics.MovePosition(smoothedPosition);
+            }
         }
     }
+
+
 }

@@ -3,8 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public delegate void FlagChanged(string flag, bool set, Optional<int> priority);
+
+[System.Serializable]
+public struct RandomStartupFlags
+{
+    public List<string> randomFlags;
+}
 
 public class DialogManager : MonoBehaviour
 {
@@ -15,6 +22,7 @@ public class DialogManager : MonoBehaviour
     public GameObject pairStart;
 
     public DialogAsset startupDialog;
+    public List<RandomStartupFlags> startupRandomFlags = new List<RandomStartupFlags>();
     
     private Stack<List<DialogSequenceEntry>> sequence = new Stack<List<DialogSequenceEntry>>();
     private DialogEntry? currentEntry;
@@ -69,6 +77,12 @@ public class DialogManager : MonoBehaviour
 
     public void RestartGame()
     {
+        var oldFlags = new Dictionary<string, Optional<int>>(flags);
+        foreach (var flag in oldFlags)
+        {
+            SetFlag(flag.Key, false, new Optional<int>());
+        }
+        
         if (pairStart)
         {
             GameObject current = pairManager.active;
@@ -81,6 +95,14 @@ public class DialogManager : MonoBehaviour
             Vector3 startPosition = pairStart.transform.position;
             current.transform.position = startPosition;
             other.transform.position = startPosition + new Vector3(1.5f,0);
+        }
+
+        foreach (RandomStartupFlags entry in startupRandomFlags)
+        {
+            if (entry.randomFlags.Count == 0) continue;
+
+            string flag = entry.randomFlags[Random.Range(0, entry.randomFlags.Count)];
+            SetFlag(flag, true, new Optional<int>());
         }
         
         EnterDialog(startupDialog);

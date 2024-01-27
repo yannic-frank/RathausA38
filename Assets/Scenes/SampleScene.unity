@@ -1365,7 +1365,23 @@ PrefabInstance:
     - target: {fileID: 3211357222692139402, guid: c6ae7d6fed0bd9040947689df8b5b5e4, type: 3}
       propertyPath: startupDialog
       value: 
-      objectReference: {fileID: 11400000, guid: d32f6ff0bfcaac64bbc53b554deca823, type: 2}
+      objectReference: {fileID: 11400000, guid: 96cdfca049da78c4daaa1cd4418e3931, type: 2}
+    - target: {fileID: 3211357222692139402, guid: c6ae7d6fed0bd9040947689df8b5b5e4, type: 3}
+      propertyPath: startupRandomFlags.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211357222692139402, guid: c6ae7d6fed0bd9040947689df8b5b5e4, type: 3}
+      propertyPath: startupRandomFlags.Array.data[0].randomFlags.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211357222692139402, guid: c6ae7d6fed0bd9040947689df8b5b5e4, type: 3}
+      propertyPath: startupRandomFlags.Array.data[0].randomFlags.Array.data[0]
+      value: start1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211357222692139402, guid: c6ae7d6fed0bd9040947689df8b5b5e4, type: 3}
+      propertyPath: startupRandomFlags.Array.data[0].randomFlags.Array.data[1]
+      value: start2
+      objectReference: {fileID: 0}
     - target: {fileID: 4645222808928850301, guid: c6ae7d6fed0bd9040947689df8b5b5e4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

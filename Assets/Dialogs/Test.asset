@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f95933e6a93744cbd7645b2e614411, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  sequence:
+  - conditions:
+    - flag: start1
+      enabled: 1
+    changeFlag:
+      enabled: 0
+      value:
+        flag: restart
+        enable: 0
+        overridePriority:
+          enabled: 0
+          value: 0
+    dialogEntry:
+      enabled: 1
+      value:
+        entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
+        text: Restart?
+        audio:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        dialogOptions:
+        - conditions: []
+          text: Yes
+          sequence:
+          - conditions: []
+            changeFlag:
+              enabled: 1
+              value:
+                flag: restart
+                enable: 1
+                overridePriority:
+                  enabled: 0
+                  value: 0
+            dialogEntry:
+              enabled: 0
+              value:
+                entity: {fileID: 0}
+                text: 
+                audio:
+                  Guid:
+                    Data1: 0
+                    Data2: 0
+                    Data3: 0
+                    Data4: 0
+                  Path: 
+                dialogOptions: []
+            dialogAsset:
+              enabled: 0
+              value: {fileID: 0}
+        - conditions: []
+          text: No
+          sequence:
+          - conditions: []
+            changeFlag:
+              enabled: 0
+              value:
+                flag: restart
+                enable: 1
+                overridePriority:
+                  enabled: 0
+                  value: 0
+            dialogEntry:
+              enabled: 0
+              value:
+                entity: {fileID: 0}
+                text: 
+                audio:
+                  Guid:
+                    Data1: 0
+                    Data2: 0
+                    Data3: 0
+                    Data4: 0
+                  Path: 
+                dialogOptions: []
+            dialogAsset:
+              enabled: 0
+              value: {fileID: 0}
+    dialogAsset:
+      enabled: 0
+      value: {fileID: 0}
+  - conditions:
+    - flag: start2
+      enabled: 1
+    changeFlag:
+      enabled: 0
+      value:
+        flag: restart
+        enable: 0
+        overridePriority:
+          enabled: 0
+          value: 0
+    dialogEntry:
+      enabled: 1
+      value:
+        entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
+        text: Meep
+        audio:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        dialogOptions: []
+    dialogAsset:
+      enabled: 0
+      value: {fileID: 0}

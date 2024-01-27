@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
+        //physics.AddForce(moveDirection * movementSpeed);
         physics.velocity = moveDirection * movementSpeed;
     }
 }

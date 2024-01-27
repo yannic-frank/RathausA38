@@ -27,8 +27,15 @@ MonoBehaviour:
     dialogEntry:
       enabled: 1
       value:
-        text: 
         entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
+        text: "M\xE4rchenende"
+        audio:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
         dialogOptions: []
     dialogAsset:
       enabled: 0
@@ -47,28 +54,15 @@ MonoBehaviour:
     dialogEntry:
       enabled: 1
       value:
-        text: 
         entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        dialogOptions: []
-    dialogAsset:
-      enabled: 0
-      value: {fileID: 0}
-  - conditions:
-    - flag: Ausgang_hinaus_1
-      enabled: 1
-    changeFlag:
-      enabled: 1
-      value:
-        flag: Ausgang_hinaus_1
-        enable: 0
-        overridePriority:
-          enabled: 0
-          value: 0
-    dialogEntry:
-      enabled: 1
-      value:
-        text: 
-        entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
+        text: "Rasenm\xE4her"
+        audio:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
         dialogOptions: []
     dialogAsset:
       enabled: 0
@@ -85,8 +79,15 @@ MonoBehaviour:
     dialogEntry:
       enabled: 0
       value:
-        text: 
         entity: {fileID: 0}
+        text: 
+        audio:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
         dialogOptions: []
     dialogAsset:
       enabled: 1

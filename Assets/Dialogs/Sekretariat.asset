@@ -27,8 +27,15 @@ MonoBehaviour:
     dialogEntry:
       enabled: 1
       value:
-        text: 
         entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
+        text: Sekretariat
+        audio:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
         dialogOptions: []
     dialogAsset:
       enabled: 0
@@ -47,8 +54,15 @@ MonoBehaviour:
     dialogEntry:
       enabled: 1
       value:
-        text: 
         entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
+        text: Sekretariat Agent
+        audio:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
         dialogOptions: []
     dialogAsset:
       enabled: 0

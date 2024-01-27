@@ -31,7 +31,7 @@ public class DialogManager : MonoBehaviour
     {
         if (set)
         {
-            flags.Add(flag, priority);
+            flags[flag] = priority;
         }
         else
         {
@@ -56,7 +56,7 @@ public class DialogManager : MonoBehaviour
 
     private void DialogUIOption(int optionIndex)
     {
-        pairManager.SetInputEnabled(true);
+        pairManager.SetUIInput(false);
         
         if (currentEntry.HasValue && optionIndex < currentEntry.Value.dialogOptions.Count)
         {
@@ -70,13 +70,15 @@ public class DialogManager : MonoBehaviour
     {
         if (!currentEntry.HasValue || currentEntry.Value.dialogOptions.Count > 0) return;
             
-        pairManager.SetInputEnabled(true);
+        pairManager.SetUIInput(false);
         
         NextDialog();
     }
 
     private void NextDialog()
     {
+        currentEntry = null;
+        
         List<DialogSequenceEntry> entries;
         while (sequence.TryPeek(out entries))
         {
@@ -85,9 +87,11 @@ public class DialogManager : MonoBehaviour
                 sequence.Pop();
                 continue;
             }
-            
+
             DialogSequenceEntry entry = entries[0];
             entries.RemoveAt(0);
+
+            if (!DialogConditions(entry.conditions)) continue;
 
             HandleSequenceEntry(entry);
             
@@ -103,21 +107,47 @@ public class DialogManager : MonoBehaviour
             SetFlag(opt.flag, opt.enable, opt.overridePriority);
         }
 
-        if (entry.dialogAsset.Enabled)
+        if (entry.dialogAsset.Enabled && entry.dialogAsset.Value)
         {
             sequence.Push(new List<DialogSequenceEntry>(entry.dialogAsset.Value.sequence));
         }
 
         if (entry.dialogEntry.Enabled)
         {
-            currentEntry = entry.dialogEntry.Value;
+            var dialogEntry = entry.dialogEntry.Value;
+            dialogEntry.dialogOptions = new List<DialogOption>(dialogEntry.dialogOptions);
 
-            pairManager.SetInputEnabled(false);
+            for (int i = 0; i < dialogEntry.dialogOptions.Count; ++i)
+            {
+                if (!DialogConditions(dialogEntry.dialogOptions[i].conditions))
+                {
+                    dialogEntry.dialogOptions.RemoveAt(i);
+                    --i;
+                }
+            }
+            
+            currentEntry = dialogEntry;
+
+            pairManager.SetUIInput(true);
             dialogUIController.ShowDialog(currentEntry.Value);
         }
         else
         {
             NextDialog();
         }
+    }
+
+    private bool DialogConditions(List<DialogCondition> conditions)
+    {
+        bool enable = true;
+        
+        foreach (var dialogCondition in conditions)
+        {
+            bool flagPresent = HasFlag(dialogCondition.flag);
+            enable = flagPresent == dialogCondition.enabled;
+            if (!enable) break;
+        }
+
+        return enable;
     }
 }

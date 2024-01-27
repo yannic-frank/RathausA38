@@ -5,7 +5,7 @@ using UnityEngine;
 public class SmoothCameraFollow : MonoBehaviour
 {
     public Transform target;
-    public float damping = 1.0f;
+    public float damping = 0.2f;
 
     private Vector3 velocity = Vector3.zero;
     

@@ -41,7 +41,7 @@ public class DialogManager : MonoBehaviour
 
     public void EnterDialog(DialogAsset dialog)
     {
-        sequence.Push(dialog.sequence);
+        sequence.Push(new List<DialogSequenceEntry>(dialog.sequence));
         if (currentEntry == null) NextDialog();
     }
 
@@ -58,7 +58,7 @@ public class DialogManager : MonoBehaviour
     {
         pairManager.SetInputEnabled(true);
         
-        if (currentEntry.HasValue)
+        if (currentEntry.HasValue && optionIndex < currentEntry.Value.dialogOptions.Count)
         {
             DialogOption option = currentEntry.Value.dialogOptions[optionIndex];
             sequence.Push(new List<DialogSequenceEntry>(option.sequence));
@@ -68,6 +68,8 @@ public class DialogManager : MonoBehaviour
 
     private void DialogUICommitted()
     {
+        if (!currentEntry.HasValue || currentEntry.Value.dialogOptions.Count > 0) return;
+            
         pairManager.SetInputEnabled(true);
         
         NextDialog();

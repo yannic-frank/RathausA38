@@ -29,8 +29,16 @@ public struct ChangeFlag
 }
 
 [System.Serializable]
+public struct DialogCondition
+{
+    public string flag;
+    public bool enabled;
+}
+
+[System.Serializable]
 public class DialogSequenceEntry
 {
+    public List<DialogCondition> conditions;
     public Optional<DialogEntry> dialogEntry;
     public Optional<DialogAsset> dialogAsset;
     public Optional<ChangeFlag> changeFlag;

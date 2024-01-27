@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e9f913c2-7f18-486a-b32d-8c71d8d89f33}">
+		<property name="assetPath">
+			<value>Film_Noir.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>24.006530612244898</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{24fa612d-5a53-4efb-8317-36e77c799403}</destination>
+		</relationship>
+	</object>
+</objects>

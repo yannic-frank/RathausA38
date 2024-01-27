@@ -128,8 +128,19 @@ public class DialogManager : MonoBehaviour
             
             currentEntry = dialogEntry;
 
-            pairManager.SetUIInput(true);
-            dialogUIController.ShowDialog(currentEntry.Value);
+            bool dialogTextEmpty = currentEntry.Value.text.Length == 0;
+
+            if (!dialogTextEmpty)
+            {
+                pairManager.SetUIInput(true);
+            }
+            
+            dialogUIController.EnterDialogEntry(currentEntry.Value);
+
+            if (dialogTextEmpty)
+            {
+                NextDialog();
+            }
         }
         else
         {

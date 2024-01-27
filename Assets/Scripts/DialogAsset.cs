@@ -122,7 +122,7 @@ namespace Editor
             if (enableProperty.boolValue)
             {
                 position = originalPosition;
-                position.y = EditorGUI.GetPropertyHeight(flagProperty);
+                position.y += EditorGUI.GetPropertyHeight(flagProperty);
                 position.x += 24;
                 position.width -= 24;
                 EditorGUI.PropertyField(position, priorityProperty, new GUIContent(priorityProperty.displayName));

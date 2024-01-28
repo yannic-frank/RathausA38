@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c855a92a404fac14d8639680a027421e, type: 3}
   m_Name: Ehemann
   m_EditorClassIdentifier: 
-  entityName: Narrator
+  entityName: Zylinder

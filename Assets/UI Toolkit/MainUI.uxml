@@ -12,7 +12,7 @@
             </ui:GroupBox>
             <ui:GroupBox style="background-color: rgba(0, 0, 0, 0.47); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-grow: 1;">
                 <ui:VisualElement style="flex-grow: 1; background-color: rgba(255, 255, 255, 0.47); align-self: stretch; margin-top: 2px; margin-right: 2px; margin-bottom: 2px; margin-left: 2px; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px;">
-                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DialogText" style="flex-grow: 1;" />
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DialogText" style="flex-grow: 1; white-space: normal;" />
                 </ui:VisualElement>
             </ui:GroupBox>
         </ui:GroupBox>

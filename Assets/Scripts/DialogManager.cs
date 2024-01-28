@@ -23,10 +23,13 @@ public class DialogManager : MonoBehaviour
 
     public DialogAsset startupDialog;
     public List<RandomStartupFlags> startupRandomFlags = new List<RandomStartupFlags>();
-    
+
+    public string restartFlag = "restart";
+
     private Stack<List<DialogSequenceEntry>> sequence = new Stack<List<DialogSequenceEntry>>();
     private DialogEntry? currentEntry;
     private Dictionary<string, Optional<int>> flags = new Dictionary<string, Optional<int>>();
+    private HashSet<string> uiInputLock = new HashSet<string>();
     
     public bool HasFlag(string flag)
     {
@@ -72,17 +75,17 @@ public class DialogManager : MonoBehaviour
 
         OnFlagChanged += FlagChanged;
         
-        Invoke("RestartGame", 0);
+        Invoke("StartGame", 1);
     }
 
-    public void RestartGame()
+    public void StartGame()
     {
         var oldFlags = new Dictionary<string, Optional<int>>(flags);
         foreach (var flag in oldFlags)
         {
             SetFlag(flag.Key, false, new Optional<int>());
         }
-        
+            
         if (pairStart)
         {
             GameObject current = pairManager.active;
@@ -104,13 +107,26 @@ public class DialogManager : MonoBehaviour
             string flag = entry.randomFlags[Random.Range(0, entry.randomFlags.Count)];
             SetFlag(flag, true, new Optional<int>());
         }
-        
+            
         EnterDialog(startupDialog);
+        
+        dialogUIController.FadeBlackIn(() => {
+        }, 0);
+    }
+
+    public void RestartGame()
+    {
+        SetInputLock("fadeout");
+        dialogUIController.FadeBlackOut(() =>
+        {
+            StartGame();
+            UnsetInputLock("fadeout");
+        });
     }
 
     private void FlagChanged(string flag, bool set, Optional<int> priority)
     {
-        if (flag == "restart")
+        if (flag == restartFlag)
         {
             SetFlag(flag, false, new Optional<int>());
             
@@ -120,7 +136,7 @@ public class DialogManager : MonoBehaviour
 
     private void DialogUIOption(int optionIndex)
     {
-        pairManager.SetUIInput(false);
+        UnsetInputLock("dialog");
         
         if (currentEntry.HasValue && optionIndex < currentEntry.Value.dialogOptions.Count)
         {
@@ -134,7 +150,7 @@ public class DialogManager : MonoBehaviour
     {
         if (!currentEntry.HasValue || currentEntry.Value.dialogOptions.Count > 0) return;
             
-        pairManager.SetUIInput(false);
+        UnsetInputLock("dialog");
         
         NextDialog();
     }
@@ -196,7 +212,7 @@ public class DialogManager : MonoBehaviour
 
             if (!dialogTextEmpty)
             {
-                pairManager.SetUIInput(true);
+                SetInputLock("dialog");
             }
             
             dialogUIController.EnterDialogEntry(currentEntry.Value);
@@ -224,5 +240,25 @@ public class DialogManager : MonoBehaviour
         }
 
         return enable;
+    }
+
+    private void SetInputLock(string inputLock)
+    {
+        if (uiInputLock.Count == 0)
+        {
+            pairManager.SetUIInput(true);
+        }
+        
+        uiInputLock.Add(inputLock);
+    }
+
+    private void UnsetInputLock(string inputLock)
+    {
+        uiInputLock.Remove(inputLock);
+
+        if (uiInputLock.Count == 0)
+        {
+            pairManager.SetUIInput(false);
+        }
     }
 }

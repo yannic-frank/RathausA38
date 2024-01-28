@@ -28,7 +28,8 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        text: Schwierige Wahl
+        text: "(Die Truhe \xF6ffnet sich unter Knarzen und \xC4chzen. Darin liegen
+          drei Ringe. Welchen w\xE4hlen?)"
         audio:
           Guid:
             Data1: 0

@@ -55,7 +55,7 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 0f67615ef20df9540835757a82a93e21, type: 2}
-        text: Ihr habt die Blumen geklaut?!
+        text: Ihr habt meine Narzissen geklaut?
         audio:
           Guid:
             Data1: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 0f67615ef20df9540835757a82a93e21, type: 2}
-        text: "Dieser Fusel ist gut f\xFCr Parasiten!"
+        text: "Wisst ihr was gut f\xFCr Parasiten ist? Hochprozentiges! (grins)"
         audio:
           Guid:
             Data1: 0
@@ -121,7 +121,10 @@ MonoBehaviour:
             Data3: 0
             Data4: 0
           Path: 
-        dialogOptions: []
+        dialogOptions:
+        - conditions: []
+          text: (Fusel nehmen)
+          sequence: []
     dialogAsset:
       enabled: 0
       value: {fileID: 0}

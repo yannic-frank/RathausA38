@@ -34,7 +34,10 @@ MonoBehaviour:
             Data3: 251512458
             Data4: -1508193651
           Path: event:/Paar verloren
-        dialogOptions: []
+        dialogOptions:
+        - conditions: []
+          text: Weiter
+          sequence: []
     dialogAsset:
       enabled: 1
       value: {fileID: 11400000, guid: e31683a56cdd9cc46b40be4aaee44358, type: 2}

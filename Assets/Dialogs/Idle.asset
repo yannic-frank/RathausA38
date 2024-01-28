@@ -34,7 +34,10 @@ MonoBehaviour:
             Data3: 426116029
             Data4: 561003709
           Path: event:/Tu doch was!
-        dialogOptions: []
+        dialogOptions:
+        - conditions: []
+          text: Weiter
+          sequence: []
     dialogAsset:
       enabled: 1
       value: {fileID: 11400000, guid: e31683a56cdd9cc46b40be4aaee44358, type: 2}

@@ -88,7 +88,10 @@ MonoBehaviour:
                     Data3: -542265956
                     Data4: 151190728
                   Path: event:/Blumenumnutz
-                dialogOptions: []
+                dialogOptions:
+                - conditions: []
+                  text: Weiter
+                  sequence: []
             dialogAsset:
               enabled: 1
               value: {fileID: 11400000, guid: e31683a56cdd9cc46b40be4aaee44358, type: 2}

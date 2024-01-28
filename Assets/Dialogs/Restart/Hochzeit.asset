@@ -37,7 +37,7 @@ MonoBehaviour:
           Path: 
         dialogOptions:
         - conditions: []
-          text: (heiraten)
+          text: (heiraten?)
           sequence:
           - conditions:
             - flag: Ring_Frodo
@@ -62,7 +62,10 @@ MonoBehaviour:
                     Data3: -1630293882
                     Data4: -922666868
                   Path: event:/Mein Schatzzz
-                dialogOptions: []
+                dialogOptions:
+                - conditions: []
+                  text: Weiter
+                  sequence: []
             dialogAsset:
               enabled: 1
               value: {fileID: 11400000, guid: e31683a56cdd9cc46b40be4aaee44358, type: 2}
@@ -89,7 +92,10 @@ MonoBehaviour:
                     Data3: -700592986
                     Data4: 124960563
                   Path: event:/Kutte gegen
-                dialogOptions: []
+                dialogOptions:
+                - conditions: []
+                  text: Weiter
+                  sequence: []
             dialogAsset:
               enabled: 1
               value: {fileID: 11400000, guid: e31683a56cdd9cc46b40be4aaee44358, type: 2}
@@ -118,7 +124,10 @@ MonoBehaviour:
                     Data3: -293055611
                     Data4: -860131798
                   Path: event:/Blumenwalzer
-                dialogOptions: []
+                dialogOptions:
+                - conditions: []
+                  text: Weiter
+                  sequence: []
             dialogAsset:
               enabled: 1
               value: {fileID: 11400000, guid: e31683a56cdd9cc46b40be4aaee44358, type: 2}

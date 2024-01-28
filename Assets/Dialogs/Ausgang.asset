@@ -36,7 +36,10 @@ MonoBehaviour:
             Data3: -2010952531
             Data4: 1498962785
           Path: event:/Paartherapie
-        dialogOptions: []
+        dialogOptions:
+        - conditions: []
+          text: Weiter
+          sequence: []
     dialogAsset:
       enabled: 0
       value: {fileID: 0}
@@ -63,7 +66,10 @@ MonoBehaviour:
             Data3: -1478210125
             Data4: 1706265166
           Path: "event:/Rasenm\xE4her"
-        dialogOptions: []
+        dialogOptions:
+        - conditions: []
+          text: Weiter
+          sequence: []
     dialogAsset:
       enabled: 0
       value: {fileID: 0}

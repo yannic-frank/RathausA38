@@ -61,7 +61,10 @@ MonoBehaviour:
                     Data3: 202146711
                     Data4: -1838467799
                   Path: event:/Scheidung
-                dialogOptions: []
+                dialogOptions:
+                - conditions: []
+                  text: Weiter
+                  sequence: []
             dialogAsset:
               enabled: 1
               value: {fileID: 11400000, guid: e31683a56cdd9cc46b40be4aaee44358, type: 2}
@@ -168,7 +171,10 @@ MonoBehaviour:
             Data3: 1501086341
             Data4: 578593561
           Path: "event:/Sekret\xE4rin heiraten"
-        dialogOptions: []
+        dialogOptions:
+        - conditions: []
+          text: Weiter
+          sequence: []
     dialogAsset:
       enabled: 1
       value: {fileID: 11400000, guid: e31683a56cdd9cc46b40be4aaee44358, type: 2}

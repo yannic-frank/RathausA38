@@ -36,7 +36,7 @@ MonoBehaviour:
           Path: event:/A38 erhalten
         dialogOptions:
         - conditions: []
-          text: Ende
+          text: Happy End
           sequence:
           - conditions: []
             changeFlag:

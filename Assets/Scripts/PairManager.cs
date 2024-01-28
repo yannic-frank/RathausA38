@@ -1,16 +1,22 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PairManager : MonoBehaviour
 {
+    public PlayerInput playerInput;
+    public DialogUIController uiController;
+    public DialogManager dialogManager;
+    
     public GameObject pair1;
     public GameObject pair2;
 
     public GameObject active;
     private PlayerMovement activeMovement;
 
-    public PlayerInput playerInput;
-    public DialogUIController uiController;
+    public float distanceTrigger = 10.0f;
+    public DialogAsset distanceTriggerDialog;
+    public DateTime distanceTriggerLast = DateTime.Now;
 
     private bool movementEnabled = true;
 
@@ -18,6 +24,7 @@ public class PairManager : MonoBehaviour
     {
         if (playerInput == null) playerInput = FindObjectOfType<PlayerInput>();
         if (uiController == null) uiController = FindObjectOfType<DialogUIController>();
+        if (dialogManager == null) dialogManager = FindObjectOfType<DialogManager>();
         
         active = pair1;
         SetCameraTarget(pair1.transform);
@@ -30,6 +37,15 @@ public class PairManager : MonoBehaviour
 
     void Update()
     {
+        if ((pair1.transform.position - pair2.transform.position).magnitude > distanceTrigger)
+        {
+            if ((DateTime.Now - distanceTriggerLast).Duration() > TimeSpan.FromSeconds(5))
+            {
+                distanceTriggerLast = DateTime.Now;
+                // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
+                dialogManager.EnterDialog(distanceTriggerDialog);
+            }
+        }
     }
 
     void OnToggleActive()

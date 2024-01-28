@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Priester
   m_EditorClassIdentifier: 
   entityName: Priester
+  entityImage: {fileID: 2800000, guid: a767403851548fc4dac22fdce16079e4, type: 3}

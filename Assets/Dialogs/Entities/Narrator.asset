@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Narrator
   m_EditorClassIdentifier: 
   entityName: Narrator
+  entityImage: {fileID: 2800000, guid: 5874e525d2d44414c85eb8a8e55cc39d, type: 3}

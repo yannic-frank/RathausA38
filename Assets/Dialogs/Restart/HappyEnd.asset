@@ -29,11 +29,11 @@ MonoBehaviour:
         text: (Hochzeitsglocken)
         audio:
           Guid:
-            Data1: 0
-            Data2: 0
-            Data3: 0
-            Data4: 0
-          Path: 
+            Data1: 1980773778
+            Data2: 1102826039
+            Data3: 1077183624
+            Data4: -1217171404
+          Path: event:/A38 erhalten
         dialogOptions:
         - conditions: []
           text: Ende

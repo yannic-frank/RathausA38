@@ -26,14 +26,14 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        text: 'Ende: Distanz'
+        text: 
         audio:
           Guid:
-            Data1: 0
-            Data2: 0
-            Data3: 0
-            Data4: 0
-          Path: 
+            Data1: -1711475215
+            Data2: 1175318505
+            Data3: 251512458
+            Data4: -1508193651
+          Path: event:/Paar verloren
         dialogOptions: []
     dialogAsset:
       enabled: 1

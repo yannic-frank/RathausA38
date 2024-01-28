@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: "G\xE4rtner"
   m_EditorClassIdentifier: 
   entityName: "G\xE4rtner"
+  entityImage: {fileID: 2800000, guid: 226b45b3e811cb84cbe4e7efec5f9fe1, type: 3}

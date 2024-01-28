@@ -28,14 +28,14 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        text: Besenkammer
+        text: 
         audio:
           Guid:
-            Data1: 0
-            Data2: 0
-            Data3: 0
-            Data4: 0
-          Path: 
+            Data1: -77436286
+            Data2: 1294573900
+            Data3: -1229198167
+            Data4: -22757465
+          Path: event:/Arachnophobie
         dialogOptions: []
     dialogAsset:
       enabled: 0

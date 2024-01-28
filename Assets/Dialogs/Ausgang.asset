@@ -28,14 +28,14 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        text: 'Ende: Heimgehen, Psychotherapie'
+        text: 
         audio:
           Guid:
-            Data1: 0
-            Data2: 0
-            Data3: 0
-            Data4: 0
-          Path: 
+            Data1: -1479173973
+            Data2: 1094677844
+            Data3: -2010952531
+            Data4: 1498962785
+          Path: event:/Paartherapie
         dialogOptions: []
     dialogAsset:
       enabled: 0
@@ -55,14 +55,14 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        text: "Ende: Rasenm\xE4her, Totengr\xE4ber"
+        text: "Leider wurde der Ehemann von einem Rasenm\xE4her erfasst...."
         audio:
           Guid:
-            Data1: 0
-            Data2: 0
-            Data3: 0
-            Data4: 0
-          Path: 
+            Data1: -373023045
+            Data2: 1123503008
+            Data3: -1478210125
+            Data4: 1706265166
+          Path: "event:/Rasenm\xE4her"
         dialogOptions: []
     dialogAsset:
       enabled: 0

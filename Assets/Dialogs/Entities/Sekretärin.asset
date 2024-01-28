@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: "Sekret\xE4rin"
   m_EditorClassIdentifier: 
   entityName: "Sekret\xE4rin"
+  entityImage: {fileID: 2800000, guid: f2dd242b904f4524eaa29f662d056c4d, type: 3}

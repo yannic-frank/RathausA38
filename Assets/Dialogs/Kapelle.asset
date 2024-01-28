@@ -28,14 +28,14 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        text: Kapelle
+        text: 
         audio:
           Guid:
-            Data1: 0
-            Data2: 0
-            Data3: 0
-            Data4: 0
-          Path: 
+            Data1: 2019759087
+            Data2: 1320617816
+            Data3: -1762985823
+            Data4: 1242248353
+          Path: event:/Lorem_ipsum
         dialogOptions: []
     dialogAsset:
       enabled: 0

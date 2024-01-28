@@ -53,14 +53,14 @@ MonoBehaviour:
               enabled: 1
               value:
                 entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-                text: "Ende: Sekret\xE4rin"
+                text: 
                 audio:
                   Guid:
-                    Data1: 0
-                    Data2: 0
-                    Data3: 0
-                    Data4: 0
-                  Path: 
+                    Data1: -1505962346
+                    Data2: 1180422113
+                    Data3: 202146711
+                    Data4: -1838467799
+                  Path: event:/Scheidung
                 dialogOptions: []
             dialogAsset:
               enabled: 1
@@ -160,14 +160,14 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        text: "Ende: Sekret\xE4rin2"
+        text: 
         audio:
           Guid:
-            Data1: 0
-            Data2: 0
-            Data3: 0
-            Data4: 0
-          Path: 
+            Data1: 2037334298
+            Data2: 1144897687
+            Data3: 1501086341
+            Data4: 578593561
+          Path: "event:/Sekret\xE4rin heiraten"
         dialogOptions: []
     dialogAsset:
       enabled: 1

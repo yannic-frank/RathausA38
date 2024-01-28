@@ -28,14 +28,14 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        text: Sekretariat
+        text: 
         audio:
           Guid:
-            Data1: 0
-            Data2: 0
-            Data3: 0
-            Data4: 0
-          Path: 
+            Data1: -953182746
+            Data2: 1087014133
+            Data3: -662095989
+            Data4: -1174965247
+          Path: event:/Rezeption
         dialogOptions: []
     dialogAsset:
       enabled: 0

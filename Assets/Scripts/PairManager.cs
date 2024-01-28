@@ -103,6 +103,11 @@ public class PairManager : MonoBehaviour
         }
     }
 
+    public void OnExit()
+    {
+        Application.Quit();
+    }
+
     void ActivatePair(GameObject pair)
     {
         if (pair != null)

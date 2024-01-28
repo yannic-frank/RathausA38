@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Exit",
+                    "type": "Button",
+                    "id": "a23f8d23-6b81-48ef-bfa7-2d96ad99c606",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -200,6 +209,17 @@
                     "action": "ToggleActive",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f3fb0a57-a4f3-45b1-b9fc-d52d3e91d6c1",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Exit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -247,6 +267,15 @@
                     "name": "Option4",
                     "type": "Button",
                     "id": "901a1fa5-7c83-4736-b093-3c6cc98adabf",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Exit",
+                    "type": "Button",
+                    "id": "2cb44c34-4242-46bf-9e09-b2b9184072ac",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -416,6 +445,17 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Option4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "09451663-6578-4b76-91d1-670a318c07a0",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Exit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

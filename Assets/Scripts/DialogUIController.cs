@@ -228,6 +228,7 @@ public class DialogUIController : MonoBehaviour
         if (type == EVENT_CALLBACK_TYPE.STOPPED)
         {
             StopAudio();
+            audioInstance.release();
             if (!nextAudio.IsNull)
             {
                 StartAudio(nextAudio);

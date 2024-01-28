@@ -54,7 +54,7 @@ MonoBehaviour:
               enabled: 1
               value:
                 entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-                text: 
+                text: And ... she is gone
                 audio:
                   Guid:
                     Data1: 796399888
@@ -81,7 +81,7 @@ MonoBehaviour:
               enabled: 1
               value:
                 entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-                text: 
+                text: Kutte gegen Schleier
                 audio:
                   Guid:
                     Data1: 970131707
@@ -110,7 +110,7 @@ MonoBehaviour:
               enabled: 1
               value:
                 entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-                text: 
+                text: "Ohne Strau\xDF kein Preis"
                 audio:
                   Guid:
                     Data1: -1690739590

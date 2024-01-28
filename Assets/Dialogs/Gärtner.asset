@@ -80,7 +80,7 @@ MonoBehaviour:
               enabled: 1
               value:
                 entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-                text: 
+                text: "Heute wird nur die Motors\xE4ge gek\xFCsst..."
                 audio:
                   Guid:
                     Data1: 1001330690

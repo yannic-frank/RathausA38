@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7f95933e6a93744cbd7645b2e614411, type: 3}
-  m_Name: Distanz
+  m_Name: Idle
   m_EditorClassIdentifier: 
   sequence:
   - conditions: []
@@ -26,14 +26,14 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        text: Aus den Augen, aus dem Sinn
+        text: "G\xE4hn..."
         audio:
           Guid:
-            Data1: -1711475215
-            Data2: 1175318505
-            Data3: 251512458
-            Data4: -1508193651
-          Path: event:/Paar verloren
+            Data1: 873109625
+            Data2: 1191641578
+            Data3: 426116029
+            Data4: 561003709
+          Path: event:/Tu doch was!
         dialogOptions: []
     dialogAsset:
       enabled: 1

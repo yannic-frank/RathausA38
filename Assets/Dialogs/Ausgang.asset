@@ -28,7 +28,7 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        text: 
+        text: "Da hat wohl jemand kalte F\xFC\xDFe bekommen..."
         audio:
           Guid:
             Data1: -1479173973

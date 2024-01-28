@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequence:
   - conditions:
-    - flag: "Sekret\xE4rin_1"
-      enabled: 0
     - flag: Ring_Gold
       enabled: 0
     changeFlag:
@@ -30,7 +28,7 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 20eb0d5d39f54474894e2a34eeaf9e49, type: 2}
-        text: Was wollt ihr?
+        text: "Was kann ich f\xFCr Sie tun?"
         audio:
           Guid:
             Data1: 0
@@ -40,11 +38,9 @@ MonoBehaviour:
           Path: 
         dialogOptions:
         - conditions: []
-          text: Scheidung!
+          text: Wir wollen uns trennen.
           sequence:
-          - conditions:
-            - flag: Global_Agent
-              enabled: 0
+          - conditions: []
             changeFlag:
               enabled: 0
               value:
@@ -72,14 +68,14 @@ MonoBehaviour:
         - conditions:
           - flag: 
             enabled: 0
-          text: Heiraten!
+          text: Wir wollen heiraten!
           sequence:
           - conditions: []
             changeFlag:
-              enabled: 1
+              enabled: 0
               value:
-                flag: "Sekret\xE4rin_1"
-                enable: 1
+                flag: 
+                enable: 0
                 overridePriority:
                   enabled: 0
                   value: 0
@@ -103,15 +99,13 @@ MonoBehaviour:
       enabled: 0
       value: {fileID: 0}
   - conditions:
-    - flag: "Sekret\xE4rin_1"
-      enabled: 1
     - flag: Ring_Gold
-      enabled: 0
+      enabled: 1
     changeFlag:
       enabled: 1
       value:
         flag: "Sekret\xE4rin_Gold"
-        enable: 0
+        enable: 1
         overridePriority:
           enabled: 0
           value: 0
@@ -119,7 +113,7 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 20eb0d5d39f54474894e2a34eeaf9e49, type: 2}
-        text: "Oha, was f\xFCr ein Toller Ring! *Blinzel*"
+        text: Wie der funkelt! *Blinzel*
         audio:
           Guid:
             Data1: 0

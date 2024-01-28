@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: "G\xE4rtner"
   m_EditorClassIdentifier: 
   sequence:
-  - conditions:
-    - flag: "G\xE4rtner_1"
-      enabled: 0
+  - conditions: []
     changeFlag:
       enabled: 1
       value:
@@ -28,7 +26,7 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 0f67615ef20df9540835757a82a93e21, type: 2}
-        text: Was wollt ihr?
+        text: Was wollt ihr denn hier?
         audio:
           Guid:
             Data1: 0
@@ -39,7 +37,7 @@ MonoBehaviour:
         dialogOptions: []
     dialogAsset:
       enabled: 1
-      value: {fileID: 11400000}
+      value: {fileID: 0}
   - conditions:
     - flag: "G\xE4rtner_1"
       enabled: 1
@@ -67,6 +65,35 @@ MonoBehaviour:
           Path: 
         dialogOptions: []
     dialogAsset:
+      enabled: 0
+      value: {fileID: 0}
+  - conditions:
+    - flag: "G\xE4rtner_1"
+      enabled: 1
+    - flag: Priester_Blumen
+      enabled: 1
+    changeFlag:
+      enabled: 0
+      value:
+        flag: 
+        enable: 0
+        overridePriority:
+          enabled: 0
+          value: 0
+    dialogEntry:
+      enabled: 1
+      value:
+        entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
+        text: "Ende: G\xE4rtner"
+        audio:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        dialogOptions: []
+    dialogAsset:
       enabled: 1
       value: {fileID: 11400000, guid: e31683a56cdd9cc46b40be4aaee44358, type: 2}
   - conditions:
@@ -78,7 +105,7 @@ MonoBehaviour:
       enabled: 1
       value:
         flag: "G\xE4rtner_Fusel"
-        enable: 0
+        enable: 1
         overridePriority:
           enabled: 0
           value: 0

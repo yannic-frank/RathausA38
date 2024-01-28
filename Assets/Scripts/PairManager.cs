@@ -26,7 +26,8 @@ public class PairManager : MonoBehaviour
         if (uiController == null) uiController = FindObjectOfType<DialogUIController>();
         if (dialogManager == null) dialogManager = FindObjectOfType<DialogManager>();
         
-        active = pair1;
+        if (active == null) active = pair1;
+        
         SetCameraTarget(pair1.transform);
         pair1.GetComponent<PartnerMovement>().partner = pair2;
         pair2.GetComponent<PartnerMovement>().partner = pair1;

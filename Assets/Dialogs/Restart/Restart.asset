@@ -17,7 +17,7 @@ MonoBehaviour:
     changeFlag:
       enabled: 1
       value:
-        flag: Restart_Reset_Position
+        flag: restart
         enable: 1
         overridePriority:
           enabled: 0

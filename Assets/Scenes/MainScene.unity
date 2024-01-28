@@ -2113,6 +2113,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 809639119}
     - target: {fileID: 933945480500137867, guid: 8eb86f2c6877e92489f142e987e35b91, type: 3}
+      propertyPath: distanceTrigger
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 933945480500137867, guid: 8eb86f2c6877e92489f142e987e35b91, type: 3}
       propertyPath: distanceTriggerDialog
       value: 
       objectReference: {fileID: 11400000, guid: e2cd53835dc2bbf4b8682169b95e3e9d, type: 2}
@@ -2127,6 +2131,10 @@ PrefabInstance:
     - target: {fileID: 3675736617931171930, guid: 8eb86f2c6877e92489f142e987e35b91, type: 3}
       propertyPath: m_Name
       value: PlayerPair
+      objectReference: {fileID: 0}
+    - target: {fileID: 3675736617931171930, guid: 8eb86f2c6877e92489f142e987e35b91, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8810291950707453095, guid: 8eb86f2c6877e92489f142e987e35b91, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2393,19 +2401,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7848014436295693870, guid: 549a03625242c0e4bb5d9708e048c011, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0089093
+      value: 2.957936
       objectReference: {fileID: 0}
     - target: {fileID: 7848014436295693870, guid: 549a03625242c0e4bb5d9708e048c011, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.9249997
+      value: 0.9758543
       objectReference: {fileID: 0}
     - target: {fileID: 7848014436295693870, guid: 549a03625242c0e4bb5d9708e048c011, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.5274
+      value: -29.53
       objectReference: {fileID: 0}
     - target: {fileID: 7848014436295693870, guid: 549a03625242c0e4bb5d9708e048c011, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.5411
+      value: 45.47
       objectReference: {fileID: 0}
     - target: {fileID: 7848014436295693870, guid: 549a03625242c0e4bb5d9708e048c011, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2527,19 +2535,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7848014436295693870, guid: 549a03625242c0e4bb5d9708e048c011, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.7631829
+      value: 1.6585644
       objectReference: {fileID: 0}
     - target: {fileID: 7848014436295693870, guid: 549a03625242c0e4bb5d9708e048c011, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.7630208
+      value: 1.5405711
       objectReference: {fileID: 0}
     - target: {fileID: 7848014436295693870, guid: 549a03625242c0e4bb5d9708e048c011, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.1037
+      value: -34.64
       objectReference: {fileID: 0}
     - target: {fileID: 7848014436295693870, guid: 549a03625242c0e4bb5d9708e048c011, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.9195
+      value: 65.6
       objectReference: {fileID: 0}
     - target: {fileID: 7848014436295693870, guid: 549a03625242c0e4bb5d9708e048c011, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2755,6 +2763,22 @@ PrefabInstance:
     - target: {fileID: 3559108387250295732, guid: 6c997fef3b9018a43b59e8469147f5f4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049477955742714287, guid: 6c997fef3b9018a43b59e8469147f5f4, type: 3}
+      propertyPath: orthographic size
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049477955742714287, guid: 6c997fef3b9018a43b59e8469147f5f4, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.2784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049477955742714287, guid: 6c997fef3b9018a43b59e8469147f5f4, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.2784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049477955742714287, guid: 6c997fef3b9018a43b59e8469147f5f4, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.2784314
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

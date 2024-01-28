@@ -124,7 +124,7 @@ MonoBehaviour:
           Path: 
         dialogOptions:
         - conditions:
-          - flag: "G\xE4rtner_Alkohol"
+          - flag: "G\xE4rtner_Fusel"
             enabled: 1
           text: (Schnaps anbieten)
           sequence:

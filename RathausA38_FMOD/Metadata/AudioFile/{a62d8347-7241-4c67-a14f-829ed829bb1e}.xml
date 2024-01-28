@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{a62d8347-7241-4c67-a14f-829ed829bb1e}">
+		<property name="assetPath">
+			<value>Vogelhochzeit gesungen.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>10.24</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b2186110-4a5d-48a1-b25b-ec233a35db12}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -47,11 +47,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b50b8dc7fa4ed8c4c8054206628a147b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInput: {fileID: 0}
+  uiController: {fileID: 0}
+  dialogManager: {fileID: 0}
   pair1: {fileID: 7655457244290535579}
   pair2: {fileID: 7208650758760089096}
   active: {fileID: 0}
-  playerInput: {fileID: 0}
-  uiController: {fileID: 0}
+  distanceTrigger: 10
+  distanceTriggerDialog: {fileID: 0}
 --- !u!114 &2508866705924337387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,6 +109,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 3579754469134969714, guid: a8158633aa098604e93e6c8d1502e2fa, type: 3}
+      propertyPath: back
+      value: 
+      objectReference: {fileID: 1672142835, guid: 5164f4062e2192942b0f3ef248cc7a14, type: 3}
+    - target: {fileID: 3579754469134969714, guid: a8158633aa098604e93e6c8d1502e2fa, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 21300000, guid: 4eb41d7c867c4094e9ac5cd63cae92bf, type: 3}
+    - target: {fileID: 3579754469134969714, guid: a8158633aa098604e93e6c8d1502e2fa, type: 3}
+      propertyPath: front
+      value: 
+      objectReference: {fileID: 21300000, guid: 0c266e341d31ea445a2c9c05ac88b8d9, type: 3}
+    - target: {fileID: 3579754469134969714, guid: a8158633aa098604e93e6c8d1502e2fa, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 4461481350258373605, guid: a8158633aa098604e93e6c8d1502e2fa, type: 3}
       propertyPath: m_Sprite
       value: 

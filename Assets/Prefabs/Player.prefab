@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5278915464619427373}
   - component: {fileID: 3581862455760627848}
   - component: {fileID: 3475724629292425853}
+  - component: {fileID: 3579754469134969714}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -77,15 +78,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 10
   physics: {fileID: 8727569878413968870}
-  playerControls:
-    m_Name: Player Controls
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 6441106b-7811-494a-acbe-334fad8008df
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
 --- !u!114 &3581862455760627848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +129,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &3579754469134969714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5459007112308237563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e933f55a0fdf3644eb17ebe77f1c51ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  front: {fileID: 0}
+  back: {fileID: 0}
+  left: {fileID: 0}
+  right: {fileID: 0}
 --- !u!1 &5500223902345330176
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +156,7 @@ GameObject:
   - component: {fileID: 1522263703214657547}
   - component: {fileID: 4461481350258373605}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Form
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

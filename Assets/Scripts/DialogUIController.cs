@@ -61,11 +61,11 @@ public class DialogUIController : MonoBehaviour
             if (button.Value < dialogOptions)
             {
                 button.Key.text = entry.dialogOptions[button.Value].text;
-                button.Key.visible = true;
+                button.Key.style.display = DisplayStyle.Flex;
             }
             else
             {
-                button.Key.visible = false;
+                button.Key.style.display = DisplayStyle.None;
             }
         }
 
@@ -108,7 +108,7 @@ public class DialogUIController : MonoBehaviour
         
         foreach (var button in optionButtons)
         {
-            button.Key.visible = false;
+            button.Key.style.display = DisplayStyle.None;
         }
     }
     

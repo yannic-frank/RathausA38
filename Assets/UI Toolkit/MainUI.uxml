@@ -1,22 +1,24 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/Style.uss?fileID=7433441132597879392&amp;guid=c3ad5180e24b2eb4bbaaa81dd1c7506f&amp;type=3#Style" />
-    <ui:GroupBox name="DialogBox" style="justify-content: flex-end; flex-grow: 1; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px;">
-        <ui:GroupBox style="max-width: 1000px; max-height: 500px; flex-grow: 1; margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-direction: row;">
-            <ui:GroupBox name="DialogEntity" style="margin-top: 0; margin-right: 5px; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; justify-content: center;">
-                <ui:Label tabindex="-1" text="Dialog Entity Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DialogEntityName" />
-                <ui:GroupBox style="margin-top: 0; margin-right: 0; margin-bottom: 0; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px; margin-left: 0; background-color: rgba(0, 0, 0, 0.47); justify-content: center;">
-                    <ui:VisualElement style="background-color: rgba(255, 255, 255, 0.47); flex-grow: 1; justify-content: center;">
-                        <ui:VisualElement name="DialogEntityImage" style="-unity-background-scale-mode: scale-to-fit; min-width: 200px; min-height: 200px;" />
+    <ui:GroupBox name="DialogBox" style="justify-content: flex-end; flex-grow: 1; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; align-items: center; align-self: stretch;">
+        <ui:VisualElement style="align-self: stretch;">
+            <ui:GroupBox name="GroupBox" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-grow: 1; flex-direction: row; justify-content: center;">
+                <ui:GroupBox name="DialogEntity" style="margin-top: 0; margin-right: 5px; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; justify-content: center; align-self: stretch;">
+                    <ui:Label tabindex="-1" text="Dialog Entity Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DialogEntityName" />
+                    <ui:GroupBox style="margin-top: 0; margin-right: 0; margin-bottom: 0; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px; margin-left: 0; background-color: rgba(0, 0, 0, 0.47); justify-content: center;">
+                        <ui:VisualElement style="background-color: rgba(255, 255, 255, 0.47); flex-grow: 1; justify-content: center;">
+                            <ui:VisualElement name="DialogEntityImage" style="-unity-background-scale-mode: scale-to-fit; min-width: 200px; min-height: 200px;" />
+                        </ui:VisualElement>
+                    </ui:GroupBox>
+                </ui:GroupBox>
+                <ui:GroupBox style="background-color: rgba(0, 0, 0, 0.47); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; max-width: 1000px; max-height: 500px; flex-shrink: 1; flex-direction: row; flex-grow: 1;">
+                    <ui:VisualElement style="background-color: rgba(255, 255, 255, 0.47); margin-top: 2px; margin-right: 2px; margin-bottom: 2px; margin-left: 2px; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px; flex-grow: 1; flex-direction: row;">
+                        <ui:Label tabindex="-1" text="kjahfjdsaj jhasd jadsjlkf sdla j kdlj kdaslkj d jkldfs alkj alkjkjahfjdsaj jhasd jadsjlkf sdla j kdlj kdaslkj d jkldfs alkj alkjkjahfjdsaj jhasd jadsjlkf sdla j kdlj kdaslkj d jkldfs alkj alkjkjahfjdsaj jhasd jadsjlkf sdla j kdlj kdaslkj d jkldfs alkj alkjkjahfjdsaj jhasd jadsjlkf sdla j kdlj kdaslkj d jkldfs alkj alkjkjahfjdsaj jhasd jadsjlkf sdla j kdlj kdaslkj d jkldfs alkj alkjkjahfjdsaj jhasd jadsjlkf sdla j kdlj kdaslkj d jkldfs alkj alkjkjahfjdsaj jhasd jadsjlkf sdla j kdlj kdaslkj d jkldfs alkj alkjkjahfjdsaj jhasd jadsjlkf sdla j kdlj kdaslkj d jkldfs alkj alkjkjahfjdsaj jhasd jadsjlkf sdla j kdlj kdaslkj d jkldfs alkj alkjkjahfjdsaj jhasd jadsjlkf sdla j kdlj kdaslkj d jkldfs alkj alkjkjahfjdsaj jhasd jadsjlkf sdla j kdlj kdaslkj d jkldfs alkj alkjkjahfjdsaj jhasd jadsjlkf sdla j kdlj kdaslkj d jkldfs alkj alkjkjahfjdsaj jhasd jadsjlkf sdla j kdlj kdaslkj d jkldfs alkj alkjkjahfjdsaj jhasd jadsjlkf sdla j kdlj kdaslkj d jkldfs alkj alkj" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DialogText" style="white-space: normal; flex-grow: 1;" />
                     </ui:VisualElement>
                 </ui:GroupBox>
             </ui:GroupBox>
-            <ui:GroupBox style="background-color: rgba(0, 0, 0, 0.47); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-grow: 1;">
-                <ui:VisualElement style="flex-grow: 1; background-color: rgba(255, 255, 255, 0.47); align-self: stretch; margin-top: 2px; margin-right: 2px; margin-bottom: 2px; margin-left: 2px; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px;">
-                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DialogText" style="flex-grow: 1; white-space: normal;" />
-                </ui:VisualElement>
-            </ui:GroupBox>
-        </ui:GroupBox>
-        <ui:GroupBox style="flex-direction: column; flex-wrap: nowrap; justify-content: flex-end; align-items: stretch; width: auto; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+        </ui:VisualElement>
+        <ui:GroupBox style="flex-direction: column; flex-wrap: nowrap; justify-content: flex-end; align-items: stretch; width: auto; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; align-self: stretch;">
             <ui:GroupBox style="flex-direction: row; justify-content: space-around; align-items: auto; align-self: auto;">
                 <ui:Button text="Option 1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Option1" style="align-items: auto; align-self: stretch; width: auto; flex-grow: 1;" />
                 <ui:Button text="Option 2" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Option2" style="flex-grow: 1;" />

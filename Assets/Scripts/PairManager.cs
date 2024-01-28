@@ -17,6 +17,7 @@ public class PairManager : MonoBehaviour
     public float distanceTrigger = 10.0f;
     public DialogAsset distanceTriggerDialog;
     public DateTime distanceTriggerLast = DateTime.Now;
+    public string distanceTriggerFlag = "distanceTrigger";
 
     private bool movementEnabled = true;
 
@@ -43,8 +44,13 @@ public class PairManager : MonoBehaviour
             if ((DateTime.Now - distanceTriggerLast).Duration() > TimeSpan.FromSeconds(5))
             {
                 distanceTriggerLast = DateTime.Now;
-                // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
-                dialogManager.EnterDialog(distanceTriggerDialog);
+
+                if (!dialogManager.HasFlag(distanceTriggerFlag))
+                {
+                    dialogManager.SetFlag(distanceTriggerFlag, true, new Optional<int>());
+                    // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
+                    dialogManager.EnterDialog(distanceTriggerDialog);
+                }
             }
         }
     }

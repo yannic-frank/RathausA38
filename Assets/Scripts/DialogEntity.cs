@@ -6,4 +6,5 @@ using UnityEngine;
 public class DialogEntity : ScriptableObject
 {
     public string entityName;
+    public Texture2D entityImage;
 }

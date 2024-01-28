@@ -62,7 +62,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0250a36f46406b4ebc480fb60baf1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioEmitter: {fileID: 0}
+  blendLength: 5
+  textSpeed: 50
 --- !u!114 &8053727592046191699
 MonoBehaviour:
   m_ObjectHideFlags: 0

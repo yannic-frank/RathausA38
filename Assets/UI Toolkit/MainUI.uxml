@@ -1,10 +1,20 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/Style.uss?fileID=7433441132597879392&amp;guid=c3ad5180e24b2eb4bbaaa81dd1c7506f&amp;type=3#Style" />
-    <ui:GroupBox name="DialogBox" style="justify-content: flex-end; flex-grow: 1;">
-        <ui:GroupBox style="flex-grow: 1; max-height: 500px; background-color: rgb(0, 0, 0); min-width: auto; min-height: auto; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
-            <ui:VisualElement style="flex-grow: 1; background-color: rgb(255, 255, 255); align-self: stretch; margin-top: 2px; margin-right: 2px; margin-bottom: 2px; margin-left: 2px; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px;">
-                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DialogText" style="flex-grow: 1;" />
-            </ui:VisualElement>
+    <ui:GroupBox name="DialogBox" style="justify-content: flex-end; flex-grow: 1; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px;">
+        <ui:GroupBox style="max-width: 1000px; max-height: 500px; flex-grow: 1; margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-direction: row;">
+            <ui:GroupBox name="DialogEntity" style="margin-top: 0; margin-right: 5px; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; justify-content: center;">
+                <ui:Label tabindex="-1" text="Dialog Entity Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DialogEntityName" />
+                <ui:GroupBox style="margin-top: 0; margin-right: 0; margin-bottom: 0; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px; margin-left: 0; background-color: rgba(0, 0, 0, 0.47); justify-content: center;">
+                    <ui:VisualElement style="background-color: rgba(255, 255, 255, 0.47); flex-grow: 1; justify-content: center;">
+                        <ui:VisualElement name="DialogEntityImage" style="-unity-background-scale-mode: scale-to-fit; min-width: 200px; min-height: 200px;" />
+                    </ui:VisualElement>
+                </ui:GroupBox>
+            </ui:GroupBox>
+            <ui:GroupBox style="background-color: rgba(0, 0, 0, 0.47); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-grow: 1;">
+                <ui:VisualElement style="flex-grow: 1; background-color: rgba(255, 255, 255, 0.47); align-self: stretch; margin-top: 2px; margin-right: 2px; margin-bottom: 2px; margin-left: 2px; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px;">
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DialogText" style="flex-grow: 1; white-space: normal;" />
+                </ui:VisualElement>
+            </ui:GroupBox>
         </ui:GroupBox>
         <ui:GroupBox style="flex-direction: column; flex-wrap: nowrap; justify-content: flex-end; align-items: stretch; width: auto; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;">
             <ui:GroupBox style="flex-direction: row; justify-content: space-around; align-items: auto; align-self: auto;">
@@ -17,5 +27,5 @@
             </ui:GroupBox>
         </ui:GroupBox>
     </ui:GroupBox>
-    <ui:VisualElement name="BlackFade" picking-mode="Ignore" class="hidden" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-color: rgb(0, 0, 0);" />
+    <ui:VisualElement name="BlackFade" picking-mode="Ignore" class="hidden" style="position: absolute; top: -1px; bottom: 2px; left: 0; right: 0; background-color: rgb(0, 0, 0);" />
 </ui:UXML>

@@ -17,14 +17,20 @@ public class DialogUIController : MonoBehaviour
     public DialogOptionClicked OnDialogOptionClicked;
 
     public float blendLength = 5;
+    public float textSpeed = 50;
 
     private UIDocument uiDocument;
     private Label dialogText;
     private Dictionary<Button, int> optionButtons = new Dictionary<Button, int>();
     private VisualElement fadeBlack;
     private VisualElement dialogBox;
+    private VisualElement dialogEntity;
+    private Label dialogEntityName;
+    private VisualElement dialogEntityImage;
 
     private int dialogOptions = 0;
+    private string dialogTargetText = "";
+    private DateTime dialogStart;
     
     private FMOD.Studio.EVENT_CALLBACK audioCallback;
     private EventInstance audioInstance;
@@ -63,9 +69,20 @@ public class DialogUIController : MonoBehaviour
             }
         }
 
+        dialogTargetText = entry.text;
+        dialogText.text = "";
+        dialogStart = DateTime.Now;
         dialogBox.visible = true;
-
-        dialogText.text = entry.text;
+        if (entry.entity != null)
+        {
+            dialogEntity.style.display = DisplayStyle.Flex;
+            dialogEntityName.text = entry.entity.entityName;
+            dialogEntityImage.style.backgroundImage = new StyleBackground(entry.entity.entityImage);
+        }
+        else
+        {
+            dialogEntity.style.display = DisplayStyle.None;
+        }
     }
 
     public void StartAudio(EventReference audioReference)
@@ -103,6 +120,11 @@ public class DialogUIController : MonoBehaviour
         
         dialogBox = uiDocument.rootVisualElement.Q("DialogBox");
         dialogBox.RegisterCallback<ClickEvent>(DialogBoxClick);
+        dialogBox.visible = false;
+
+        dialogEntity = uiDocument.rootVisualElement.Q("DialogEntity");
+        dialogEntityName = uiDocument.rootVisualElement.Q<Label>("DialogEntityName");
+        dialogEntityImage = uiDocument.rootVisualElement.Q("DialogEntityImage");
 
         optionButtons.Clear();
         fadeBlack = uiDocument.rootVisualElement.Q("BlackFade");
@@ -141,7 +163,8 @@ public class DialogUIController : MonoBehaviour
 
     private void Update()
     {
-        
+        int index = Math.Clamp((int)(((DateTime.Now - dialogStart)).TotalSeconds * textSpeed), 0, dialogTargetText.Length);
+        dialogText.text = dialogTargetText.Substring(0, index);
     }
 
     private void OptionClick(ClickEvent evt)

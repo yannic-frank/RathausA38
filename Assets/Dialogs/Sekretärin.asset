@@ -38,7 +38,7 @@ MonoBehaviour:
           Path: 
         dialogOptions:
         - conditions: []
-          text: Wir wollen uns trennen.
+          text: Uns trennen!
           sequence:
           - conditions: []
             changeFlag:
@@ -68,11 +68,11 @@ MonoBehaviour:
         - conditions:
           - flag: 
             enabled: 0
-          text: Wir wollen heiraten!
+          text: Uns verheiraten!
           sequence:
           - conditions: []
             changeFlag:
-              enabled: 0
+              enabled: 1
               value:
                 flag: 
                 enable: 0
@@ -80,10 +80,11 @@ MonoBehaviour:
                   enabled: 0
                   value: 0
             dialogEntry:
-              enabled: 0
+              enabled: 1
               value:
-                entity: {fileID: 0}
-                text: 
+                entity: {fileID: 11400000, guid: 20eb0d5d39f54474894e2a34eeaf9e49, type: 2}
+                text: "Wie sch\xF6n! Wir haben einen Priester im Haus. Ring und Blumen
+                  haben Sie ja dabei, nicht wahr?"
                 audio:
                   Guid:
                     Data1: 0
@@ -91,7 +92,26 @@ MonoBehaviour:
                     Data3: 0
                     Data4: 0
                   Path: 
-                dialogOptions: []
+                dialogOptions:
+                - conditions:
+                  - flag: Global_Ring
+                    enabled: 0
+                  text: "\xC4hem....."
+                  sequence: []
+                - conditions:
+                  - flag: Ring_Play
+                    enabled: 1
+                  - flag: Priester_Blumen
+                    enabled: 1
+                  text: Wir sind bereit!
+                  sequence: []
+                - conditions:
+                  - flag: Ring_Frodo
+                    enabled: 1
+                  - flag: Priester_Blumen
+                    enabled: 1
+                  text: Wir sind bereit!
+                  sequence: []
             dialogAsset:
               enabled: 0
               value: {fileID: 0}
@@ -113,7 +133,7 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 20eb0d5d39f54474894e2a34eeaf9e49, type: 2}
-        text: Wie der funkelt! *Blinzel*
+        text: Wie der Ring funkelt!
         audio:
           Guid:
             Data1: 0
@@ -150,5 +170,5 @@ MonoBehaviour:
           Path: 
         dialogOptions: []
     dialogAsset:
-      enabled: 0
-      value: {fileID: 0}
+      enabled: 1
+      value: {fileID: 11400000, guid: e31683a56cdd9cc46b40be4aaee44358, type: 2}

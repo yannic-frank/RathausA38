@@ -10,17 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7f95933e6a93744cbd7645b2e614411, type: 3}
-  m_Name: "Fundb\xFCro"
+  m_Name: Distanz
   m_EditorClassIdentifier: 
   sequence:
-  - conditions:
-    - flag: "Fundb\xFCro_1"
-      enabled: 0
+  - conditions: []
     changeFlag:
-      enabled: 1
+      enabled: 0
       value:
-        flag: "Fundb\xFCro_1"
-        enable: 1
+        flag: 
+        enable: 0
         overridePriority:
           enabled: 0
           value: 0
@@ -28,7 +26,7 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        text: "Fundb\xFCro gefunden!"
+        text: 'Ende: Distanz'
         audio:
           Guid:
             Data1: 0
@@ -38,5 +36,5 @@ MonoBehaviour:
           Path: 
         dialogOptions: []
     dialogAsset:
-      enabled: 0
-      value: {fileID: 0}
+      enabled: 1
+      value: {fileID: 11400000, guid: e31683a56cdd9cc46b40be4aaee44358, type: 2}

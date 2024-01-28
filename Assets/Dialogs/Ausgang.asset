@@ -41,7 +41,7 @@ MonoBehaviour:
       enabled: 0
       value: {fileID: 0}
   - conditions:
-    - flag: Rnd_Outtro_1
+    - flag: Rnd_Outtro_2
       enabled: 1
     changeFlag:
       enabled: 0

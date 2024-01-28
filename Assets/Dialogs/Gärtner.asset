@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7f95933e6a93744cbd7645b2e614411, type: 3}
-  m_Name: "Sekret\xE4rin"
+  m_Name: "G\xE4rtner"
   m_EditorClassIdentifier: 
   sequence:
   - conditions:
-    - flag: "Sekret\xE4rin_1"
+    - flag: "G\xE4rtner_1"
       enabled: 0
     changeFlag:
-      enabled: 0
+      enabled: 1
       value:
-        flag: 
-        enable: 0
+        flag: "G\xE4rtner_1"
+        enable: 1
         overridePriority:
           enabled: 0
           value: 0
@@ -68,15 +68,15 @@ MonoBehaviour:
               enabled: 1
               value: {fileID: 11400000, guid: e31683a56cdd9cc46b40be4aaee44358, type: 2}
         - conditions:
-          - flag: 
-            enabled: 0
+          - flag: "Sekret\xE4rin_1"
+            enabled: 1
           text: Heiraten!
           sequence:
           - conditions: []
             changeFlag:
               enabled: 1
               value:
-                flag: "Sekret\xE4rin_1"
+                flag: "Sekret\xE4rin_wollen_heiraten"
                 enable: 1
                 overridePriority:
                   enabled: 0
@@ -123,7 +123,67 @@ MonoBehaviour:
             Data3: 0
             Data4: 0
           Path: 
-        dialogOptions: []
+        dialogOptions:
+        - conditions: []
+          text: Scheidung!
+          sequence:
+          - conditions:
+            - flag: Global_Agent
+              enabled: 0
+            changeFlag:
+              enabled: 0
+              value:
+                flag: 
+                enable: 0
+                overridePriority:
+                  enabled: 0
+                  value: 0
+            dialogEntry:
+              enabled: 1
+              value:
+                entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
+                text: "Ende: Sekret\xE4rin"
+                audio:
+                  Guid:
+                    Data1: 0
+                    Data2: 0
+                    Data3: 0
+                    Data4: 0
+                  Path: 
+                dialogOptions: []
+            dialogAsset:
+              enabled: 1
+              value: {fileID: 11400000, guid: e31683a56cdd9cc46b40be4aaee44358, type: 2}
+        - conditions:
+          - flag: "Sekret\xE4rin_1"
+            enabled: 1
+          text: Heiraten!
+          sequence:
+          - conditions: []
+            changeFlag:
+              enabled: 1
+              value:
+                flag: "Sekret\xE4rin_wollen_heiraten"
+                enable: 1
+                overridePriority:
+                  enabled: 0
+                  value: 0
+            dialogEntry:
+              enabled: 0
+              value:
+                entity: {fileID: 0}
+                text: 
+                audio:
+                  Guid:
+                    Data1: 0
+                    Data2: 0
+                    Data3: 0
+                    Data4: 0
+                  Path: 
+                dialogOptions: []
+            dialogAsset:
+              enabled: 0
+              value: {fileID: 0}
     dialogAsset:
       enabled: 0
       value: {fileID: 0}

@@ -318,6 +318,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 549a03625242c0e4bb5d9708e048c011, type: 3}
+--- !u!1 &809639119 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7208650758760089096, guid: 8eb86f2c6877e92489f142e987e35b91, type: 3}
+  m_PrefabInstance: {fileID: 1180786196}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &882470519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2106,7 +2111,7 @@ PrefabInstance:
     - target: {fileID: 933945480500137867, guid: 8eb86f2c6877e92489f142e987e35b91, type: 3}
       propertyPath: active
       value: 
-      objectReference: {fileID: 1895478991}
+      objectReference: {fileID: 809639119}
     - target: {fileID: 933945480500137867, guid: 8eb86f2c6877e92489f142e987e35b91, type: 3}
       propertyPath: distanceTriggerDialog
       value: 
@@ -2630,11 +2635,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 854b523b17854dc45a9ec27967236e7e, type: 3}
---- !u!1 &1895478991 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7655457244290535579, guid: 8eb86f2c6877e92489f142e987e35b91, type: 3}
-  m_PrefabInstance: {fileID: 1180786196}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1996667544
 GameObject:
   m_ObjectHideFlags: 0

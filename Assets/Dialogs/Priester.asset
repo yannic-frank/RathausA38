@@ -27,8 +27,8 @@ MonoBehaviour:
     dialogEntry:
       enabled: 1
       value:
-        entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        text: Priester im Gebet
+        entity: {fileID: 11400000, guid: 8f60acd1110e09249b134813a389c3c8, type: 2}
+        text: Lorem ipsum dolor... (betend)
         audio:
           Guid:
             Data1: 0
@@ -37,38 +37,8 @@ MonoBehaviour:
             Data4: 0
           Path: 
         dialogOptions:
-        - conditions:
-          - flag: Priester_Blumen
-            enabled: 0
-          text: Take Flowers?
-          sequence:
-          - conditions: []
-            changeFlag:
-              enabled: 1
-              value:
-                flag: Priester_Blumen
-                enable: 1
-                overridePriority:
-                  enabled: 0
-                  value: 0
-            dialogEntry:
-              enabled: 0
-              value:
-                entity: {fileID: 0}
-                text: 
-                audio:
-                  Guid:
-                    Data1: 0
-                    Data2: 0
-                    Data3: 0
-                    Data4: 0
-                  Path: 
-                dialogOptions: []
-            dialogAsset:
-              enabled: 0
-              value: {fileID: 0}
         - conditions: []
-          text: Let him prey
+          text: (weggehen)
           sequence:
           - conditions: []
             changeFlag:
@@ -95,6 +65,36 @@ MonoBehaviour:
             dialogAsset:
               enabled: 1
               value: {fileID: 0}
+        - conditions:
+          - flag: Priester_Blumen
+            enabled: 0
+          text: (Blumen-Deko mopsen)
+          sequence:
+          - conditions: []
+            changeFlag:
+              enabled: 1
+              value:
+                flag: Priester_Blumen
+                enable: 1
+                overridePriority:
+                  enabled: 0
+                  value: 0
+            dialogEntry:
+              enabled: 0
+              value:
+                entity: {fileID: 0}
+                text: 
+                audio:
+                  Guid:
+                    Data1: 0
+                    Data2: 0
+                    Data3: 0
+                    Data4: 0
+                  Path: 
+                dialogOptions: []
+            dialogAsset:
+              enabled: 0
+              value: {fileID: 0}
     dialogAsset:
       enabled: 0
       value: {fileID: 0}
@@ -113,7 +113,8 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 8f60acd1110e09249b134813a389c3c8, type: 2}
-        text: Ach du Herr im Himmel....
+        text: "Hochzeitsmesse? Diese schwere B\xFCrde ist einfach zu viel f\xFCr
+          einen alten Mann wie mich. Gott errette mich.. (seufz)"
         audio:
           Guid:
             Data1: 0
@@ -125,7 +126,7 @@ MonoBehaviour:
         - conditions:
           - flag: "G\xE4rtner_Alkohol"
             enabled: 1
-          text: Gib ihm Stoff
+          text: (Schnaps anbieten)
           sequence:
           - conditions:
             - flag: Ring_Frodo

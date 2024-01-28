@@ -36,9 +36,7 @@ MonoBehaviour:
             Data4: 0
           Path: 
         dialogOptions:
-        - conditions:
-          - flag: "G\xE4rtner_Alkohol"
-            enabled: 1
+        - conditions: []
           text: (heiraten)
           sequence:
           - conditions:

@@ -90,6 +90,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8810291950707453095}
     m_Modifications:
+    - target: {fileID: 1522263703214657547, guid: a8158633aa098604e93e6c8d1502e2fa, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.8506
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522263703214657547, guid: a8158633aa098604e93e6c8d1502e2fa, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.0558
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522263703214657547, guid: a8158633aa098604e93e6c8d1502e2fa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522263703214657547, guid: a8158633aa098604e93e6c8d1502e2fa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461481350258373605, guid: a8158633aa098604e93e6c8d1502e2fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0c266e341d31ea445a2c9c05ac88b8d9, type: 3}
     - target: {fileID: 4461481350258373605, guid: a8158633aa098604e93e6c8d1502e2fa, type: 3}
       propertyPath: m_Color.b
       value: 0.009433806

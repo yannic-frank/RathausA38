@@ -19,7 +19,7 @@ public class DialogUIController : MonoBehaviour
     public float blendLength = 5;
 
     private UIDocument uiDocument;
-    private TextElement dialogText;
+    private Label dialogText;
     private Dictionary<Button, int> optionButtons = new Dictionary<Button, int>();
     private VisualElement fadeBlack;
     private VisualElement dialogBox;
@@ -88,6 +88,11 @@ public class DialogUIController : MonoBehaviour
     public void HideDialog()
     {
         dialogBox.visible = false;
+        
+        foreach (var button in optionButtons)
+        {
+            button.Key.visible = false;
+        }
     }
     
     private void OnEnable()

@@ -63,7 +63,35 @@ MonoBehaviour:
             Data3: 0
             Data4: 0
           Path: 
-        dialogOptions: []
+        dialogOptions:
+        - conditions: []
+          text: "\xC4hem..."
+          sequence:
+          - conditions: []
+            changeFlag:
+              enabled: 0
+              value:
+                flag: 
+                enable: 0
+                overridePriority:
+                  enabled: 0
+                  value: 0
+            dialogEntry:
+              enabled: 1
+              value:
+                entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
+                text: "Ende: G\xE4rtner"
+                audio:
+                  Guid:
+                    Data1: 0
+                    Data2: 0
+                    Data3: 0
+                    Data4: 0
+                  Path: 
+                dialogOptions: []
+            dialogAsset:
+              enabled: 1
+              value: {fileID: 11400000, guid: e31683a56cdd9cc46b40be4aaee44358, type: 2}
     dialogAsset:
       enabled: 0
       value: {fileID: 0}
@@ -71,35 +99,8 @@ MonoBehaviour:
     - flag: "G\xE4rtner_1"
       enabled: 1
     - flag: Priester_Blumen
-      enabled: 1
-    changeFlag:
       enabled: 0
-      value:
-        flag: 
-        enable: 0
-        overridePriority:
-          enabled: 0
-          value: 0
-    dialogEntry:
-      enabled: 1
-      value:
-        entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        text: "Ende: G\xE4rtner"
-        audio:
-          Guid:
-            Data1: 0
-            Data2: 0
-            Data3: 0
-            Data4: 0
-          Path: 
-        dialogOptions: []
-    dialogAsset:
-      enabled: 1
-      value: {fileID: 11400000, guid: e31683a56cdd9cc46b40be4aaee44358, type: 2}
-  - conditions:
-    - flag: "G\xE4rtner_1"
-      enabled: 1
-    - flag: Priester_Blumen
+    - flag: "G\xE4rtner_Fusel"
       enabled: 0
     changeFlag:
       enabled: 1

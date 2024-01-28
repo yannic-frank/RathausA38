@@ -231,6 +231,7 @@ public class DialogUIController : MonoBehaviour
             if (!nextAudio.IsNull)
             {
                 StartAudio(nextAudio);
+                nextAudio = new EventReference();
             }
         }
         return FMOD.RESULT.OK;

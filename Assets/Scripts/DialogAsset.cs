@@ -24,7 +24,6 @@ public struct DialogEntry
 [System.Serializable]
 public struct ChangeFlag
 {
-    [DoNotSerialize]
     public string flag;
     public bool enable;
     public Optional<int> overridePriority;
@@ -52,6 +51,7 @@ public class DialogAsset : ScriptableObject
     public List<DialogSequenceEntry> sequence;
 }
 
+#if UNITY_EDITOR
 namespace Editor
 {
     using UnityEditor;
@@ -132,3 +132,4 @@ namespace Editor
         }
     }
 }
+#endif

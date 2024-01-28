@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
+[System.Serializable]
 public struct Optional<T>
 {
-    [SerializeField] private bool enabled;
-    [SerializeField] private T value;
+    [UnityEngine.SerializeField] private bool enabled;
+    [UnityEngine.SerializeField] private T value;
 
     public bool Enabled => enabled;
     public T Value => value;
@@ -23,6 +23,7 @@ public struct Optional<T>
     }
 }
 
+#if UNITY_EDITOR
 namespace Editor
 {
     using UnityEditor;
@@ -63,3 +64,4 @@ namespace Editor
         }
     }
 }
+#endif

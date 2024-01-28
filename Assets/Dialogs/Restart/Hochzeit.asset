@@ -84,7 +84,8 @@ MonoBehaviour:
               enabled: 1
               value:
                 entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-                text: Kutte gegen Schleier
+                text: Kutte gegen Schleier - Du hast mit dem Spielzeugring Eindruck
+                  geschunden!
                 audio:
                   Guid:
                     Data1: 970131707

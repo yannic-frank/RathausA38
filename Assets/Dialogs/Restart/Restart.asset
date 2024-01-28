@@ -15,18 +15,18 @@ MonoBehaviour:
   sequence:
   - conditions: []
     changeFlag:
-      enabled: 1
+      enabled: 0
       value:
-        flag: restart
-        enable: 1
+        flag: 
+        enable: 0
         overridePriority:
           enabled: 0
           value: 0
     dialogEntry:
-      enabled: 0
+      enabled: 1
       value:
-        entity: {fileID: 0}
-        text: 
+        entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
+        text: "Was f\xFCr ein gl\xFCckliches Paar?"
         audio:
           Guid:
             Data1: 0
@@ -34,7 +34,35 @@ MonoBehaviour:
             Data3: 0
             Data4: 0
           Path: 
-        dialogOptions: []
+        dialogOptions:
+        - conditions: []
+          text: Auf zur Hochzeit!
+          sequence:
+          - conditions: []
+            changeFlag:
+              enabled: 1
+              value:
+                flag: restart
+                enable: 1
+                overridePriority:
+                  enabled: 0
+                  value: 0
+            dialogEntry:
+              enabled: 0
+              value:
+                entity: {fileID: 0}
+                text: 
+                audio:
+                  Guid:
+                    Data1: 0
+                    Data2: 0
+                    Data3: 0
+                    Data4: 0
+                  Path: 
+                dialogOptions: []
+            dialogAsset:
+              enabled: 0
+              value: {fileID: 0}
     dialogAsset:
       enabled: 0
       value: {fileID: 0}

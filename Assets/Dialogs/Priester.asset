@@ -132,10 +132,10 @@ MonoBehaviour:
             - flag: 
               enabled: 0
             changeFlag:
-              enabled: 1
+              enabled: 0
               value:
-                flag: Priester_Hochzeit
-                enable: 1
+                flag: 
+                enable: 0
                 overridePriority:
                   enabled: 0
                   value: 0
@@ -153,8 +153,8 @@ MonoBehaviour:
                   Path: 
                 dialogOptions: []
             dialogAsset:
-              enabled: 0
-              value: {fileID: 0}
+              enabled: 1
+              value: {fileID: 11400000, guid: 68bde7c6a99b1a24d9315068094e77a5, type: 2}
         - conditions: []
           text: (weggehen)
           sequence:

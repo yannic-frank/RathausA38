@@ -129,6 +129,122 @@ MonoBehaviour:
           text: (Schnaps anbieten)
           sequence:
           - conditions:
+            - flag: 
+              enabled: 0
+            changeFlag:
+              enabled: 1
+              value:
+                flag: Priester_Hochzeit
+                enable: 1
+                overridePriority:
+                  enabled: 0
+                  value: 0
+            dialogEntry:
+              enabled: 0
+              value:
+                entity: {fileID: 0}
+                text: 
+                audio:
+                  Guid:
+                    Data1: 0
+                    Data2: 0
+                    Data3: 0
+                    Data4: 0
+                  Path: 
+                dialogOptions: []
+            dialogAsset:
+              enabled: 0
+              value: {fileID: 0}
+        - conditions: []
+          text: (weggehen)
+          sequence:
+          - conditions: []
+            changeFlag:
+              enabled: 0
+              value:
+                flag: 
+                enable: 0
+                overridePriority:
+                  enabled: 0
+                  value: 0
+            dialogEntry:
+              enabled: 0
+              value:
+                entity: {fileID: 0}
+                text: 
+                audio:
+                  Guid:
+                    Data1: 0
+                    Data2: 0
+                    Data3: 0
+                    Data4: 0
+                  Path: 
+                dialogOptions: []
+            dialogAsset:
+              enabled: 1
+              value: {fileID: 0}
+        - conditions: []
+          text: (heiraten)
+          sequence:
+          - conditions: []
+            changeFlag:
+              enabled: 0
+              value:
+                flag: 
+                enable: 0
+                overridePriority:
+                  enabled: 0
+                  value: 0
+            dialogEntry:
+              enabled: 1
+              value:
+                entity: {fileID: 11400000, guid: 8f60acd1110e09249b134813a389c3c8, type: 2}
+                text: Meine Kehle ist so trocken! (tiefer Seuftzer)
+                audio:
+                  Guid:
+                    Data1: 0
+                    Data2: 0
+                    Data3: 0
+                    Data4: 0
+                  Path: 
+                dialogOptions: []
+            dialogAsset:
+              enabled: 1
+              value: {fileID: 0}
+    dialogAsset:
+      enabled: 0
+      value: {fileID: 0}
+  - conditions:
+    - flag: Priester_Hochzeit
+      enabled: 1
+    changeFlag:
+      enabled: 0
+      value:
+        flag: 
+        enable: 0
+        overridePriority:
+          enabled: 0
+          value: 0
+    dialogEntry:
+      enabled: 1
+      value:
+        entity: {fileID: 11400000, guid: 8f60acd1110e09249b134813a389c3c8, type: 2}
+        text: "Lobpreiset den Herren! Lass mich diese beiden in den heiligen Bund
+          der Ehe f\xFChren! Halleluja!"
+        audio:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        dialogOptions:
+        - conditions:
+          - flag: "G\xE4rtner_Alkohol"
+            enabled: 1
+          text: (heiraten)
+          sequence:
+          - conditions:
             - flag: Ring_Frodo
               enabled: 1
             changeFlag:
@@ -240,62 +356,150 @@ MonoBehaviour:
             dialogAsset:
               enabled: 0
               value: {fileID: 0}
-        - conditions: []
-          text: Let him prey
-          sequence:
-          - conditions: []
-            changeFlag:
-              enabled: 0
-              value:
-                flag: 
-                enable: 0
-                overridePriority:
-                  enabled: 0
-                  value: 0
-            dialogEntry:
-              enabled: 0
-              value:
-                entity: {fileID: 0}
-                text: 
-                audio:
-                  Guid:
-                    Data1: 0
-                    Data2: 0
-                    Data3: 0
-                    Data4: 0
-                  Path: 
-                dialogOptions: []
-            dialogAsset:
-              enabled: 1
-              value: {fileID: 0}
-        - conditions: []
-          text: Heirat?
-          sequence:
-          - conditions: []
-            changeFlag:
-              enabled: 0
-              value:
-                flag: 
-                enable: 0
-                overridePriority:
-                  enabled: 0
-                  value: 0
-            dialogEntry:
-              enabled: 1
-              value:
-                entity: {fileID: 11400000, guid: 8f60acd1110e09249b134813a389c3c8, type: 2}
-                text: "Ich f\xFChle mich zu schlecht!"
-                audio:
-                  Guid:
-                    Data1: 0
-                    Data2: 0
-                    Data3: 0
-                    Data4: 0
-                  Path: 
-                dialogOptions: []
-            dialogAsset:
-              enabled: 1
-              value: {fileID: 0}
     dialogAsset:
       enabled: 0
       value: {fileID: 0}
+  - conditions:
+    - flag: Priester_Hochzeit
+      enabled: 1
+    changeFlag:
+      enabled: 0
+      value:
+        flag: 
+        enable: 0
+        overridePriority:
+          enabled: 0
+          value: 0
+    dialogEntry:
+      enabled: 0
+      value:
+        entity: {fileID: 0}
+        text: 
+        audio:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        dialogOptions:
+        - conditions:
+          - flag: "G\xE4rtner_Alkohol"
+            enabled: 1
+          text: (heiraten)
+          sequence:
+          - conditions:
+            - flag: Ring_Frodo
+              enabled: 1
+            changeFlag:
+              enabled: 0
+              value:
+                flag: 
+                enable: 0
+                overridePriority:
+                  enabled: 0
+                  value: 0
+            dialogEntry:
+              enabled: 1
+              value:
+                entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
+                text: 'Ende: Verschwinden'
+                audio:
+                  Guid:
+                    Data1: 0
+                    Data2: 0
+                    Data3: 0
+                    Data4: 0
+                  Path: 
+                dialogOptions: []
+            dialogAsset:
+              enabled: 0
+              value: {fileID: 0}
+          - conditions:
+            - flag: Ring_Play
+              enabled: 1
+            changeFlag:
+              enabled: 0
+              value:
+                flag: 
+                enable: 0
+                overridePriority:
+                  enabled: 0
+                  value: 0
+            dialogEntry:
+              enabled: 1
+              value:
+                entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
+                text: 'Ende: Priesterheirat'
+                audio:
+                  Guid:
+                    Data1: 0
+                    Data2: 0
+                    Data3: 0
+                    Data4: 0
+                  Path: 
+                dialogOptions: []
+            dialogAsset:
+              enabled: 0
+              value: {fileID: 0}
+          - conditions:
+            - flag: Ring_Gold
+              enabled: 1
+            - flag: Priester_Blumen
+              enabled: 0
+            changeFlag:
+              enabled: 0
+              value:
+                flag: 
+                enable: 0
+                overridePriority:
+                  enabled: 0
+                  value: 0
+            dialogEntry:
+              enabled: 1
+              value:
+                entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
+                text: "Ende: Strau\xDF vergessen"
+                audio:
+                  Guid:
+                    Data1: 0
+                    Data2: 0
+                    Data3: 0
+                    Data4: 0
+                  Path: 
+                dialogOptions: []
+            dialogAsset:
+              enabled: 0
+              value: {fileID: 0}
+          - conditions:
+            - flag: Ring_Gold
+              enabled: 1
+            - flag: Priester_Blumen
+              enabled: 1
+            changeFlag:
+              enabled: 0
+              value:
+                flag: 
+                enable: 0
+                overridePriority:
+                  enabled: 0
+                  value: 0
+            dialogEntry:
+              enabled: 1
+              value:
+                entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
+                text: A38!!
+                audio:
+                  Guid:
+                    Data1: 0
+                    Data2: 0
+                    Data3: 0
+                    Data4: 0
+                  Path: 
+                dialogOptions: []
+            dialogAsset:
+              enabled: 0
+              value: {fileID: 0}
+    dialogAsset:
+      enabled: 1
+      value: {fileID: 11400000, guid: e31683a56cdd9cc46b40be4aaee44358, type: 2}

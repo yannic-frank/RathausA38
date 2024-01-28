@@ -28,14 +28,14 @@ MonoBehaviour:
       enabled: 1
       value:
         entity: {fileID: 11400000, guid: 8b0567f3e383dd745823592dcfb7b7c5, type: 2}
-        text: "M\xE4rchenintro"
+        text: 
         audio:
           Guid:
-            Data1: 0
-            Data2: 0
-            Data3: 0
-            Data4: 0
-          Path: 
+            Data1: -418383952
+            Data2: 1111112677
+            Data3: -705749315
+            Data4: 1838753983
+          Path: "event:/M\xE4rchenintro"
         dialogOptions: []
     dialogAsset:
       enabled: 0

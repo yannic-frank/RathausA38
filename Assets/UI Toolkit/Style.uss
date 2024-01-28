@@ -1,0 +1,15 @@
+.shown {
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
+    display: flex;
+    visibility: visible;
+}
+
+#BlackFade {
+    transition-timing-function: ease-in-out;
+    transition-duration: 5s;
+    transition-property: opacity;
+}

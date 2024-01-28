@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
+using Button = UnityEngine.UIElements.Button;
 using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 public delegate void DialogCommitted();
@@ -14,12 +16,21 @@ public class DialogUIController : MonoBehaviour
     public DialogCommitted OnDialogCommitted; 
     public DialogOptionClicked OnDialogOptionClicked;
 
+    public float blendLength = 5;
+
     private UIDocument uiDocument;
     private TextElement dialogText;
     private Dictionary<Button, int> optionButtons = new Dictionary<Button, int>();
+    private VisualElement fadeBlack;
+    private VisualElement dialogBox;
+
+    private int dialogOptions = 0;
+    
     private FMOD.Studio.EVENT_CALLBACK audioCallback;
     private EventInstance audioInstance;
     private EventReference nextAudio;
+    
+    private Action fadeBlackCallback;
 
     public void EnterDialogEntry(DialogEntry entry)
     {
@@ -37,31 +48,25 @@ public class DialogUIController : MonoBehaviour
         }
         
         if (entry.text.Length == 0) return;
-        
-        uiDocument.enabled = true;
-        
-        dialogText = uiDocument.rootVisualElement.Q<Label>("DialogText");
-        dialogText.RegisterCallback<ClickEvent>(DialogTextClick);
-        for (int i = 0; i < 4; ++i)
+
+        dialogOptions = entry.dialogOptions.Count;
+        foreach (var button in optionButtons)
         {
-            Button button = uiDocument.rootVisualElement.Q("Option" + (i + 1)) as Button;
-            if (button != null)
+            if (button.Value < dialogOptions)
             {
-                if (i < entry.dialogOptions.Count)
-                {
-                    button.RegisterCallback<ClickEvent>(OptionClick);
-                    optionButtons.Add(button, i);
-                    button.text = entry.dialogOptions[i].text;
-                }
-                else
-                {
-                    button.parent.Remove(button);
-                }
+                button.Key.text = entry.dialogOptions[button.Value].text;
+                button.Key.visible = true;
+            }
+            else
+            {
+                button.Key.visible = false;
             }
         }
-        
+
+        dialogBox.visible = true;
+
         dialogText.text = entry.text;
-        }
+    }
 
     public void StartAudio(EventReference audioReference)
     {
@@ -82,18 +87,32 @@ public class DialogUIController : MonoBehaviour
     
     public void HideDialog()
     {
-        foreach (var button in optionButtons)
-        {
-            button.Key.UnregisterCallback<ClickEvent>(OptionClick);
-        }
-        optionButtons.Clear();
-        
-        uiDocument.enabled = false;
+        dialogBox.visible = false;
     }
     
     private void OnEnable()
     {
         uiDocument = GetComponent<UIDocument>();
+        
+        dialogText = uiDocument.rootVisualElement.Q<Label>("DialogText");
+        
+        dialogBox = uiDocument.rootVisualElement.Q("DialogBox");
+        dialogBox.RegisterCallback<ClickEvent>(DialogBoxClick);
+
+        optionButtons.Clear();
+        fadeBlack = uiDocument.rootVisualElement.Q("BlackFade");
+        fadeBlack.RemoveFromClassList("hidden");
+        fadeBlack.RegisterCallback<TransitionEndEvent>(FadeBlackCallback);
+        
+        for (int i = 0; i < 4; ++i)
+        {
+            Button button = uiDocument.rootVisualElement.Q("Option" + (i + 1)) as Button;
+            if (button != null)
+            {
+                optionButtons.Add(button, i);
+                button.RegisterCallback<ClickEvent>(OptionClick);
+            }
+        }
     }
 
     private void OnDisable()
@@ -101,46 +120,78 @@ public class DialogUIController : MonoBehaviour
         HideDialog();
         StopAudio();
         
+        foreach (var button in optionButtons)
+        {
+            button.Key.UnregisterCallback<ClickEvent>(OptionClick);
+        }
+        
         audioInstance.setCallback(null);
         audioInstance.release();
     }
 
     private void Start()
     {
-        uiDocument.enabled = false;
-
         audioCallback = new EVENT_CALLBACK(AudioEventCallback);
+    }
+
+    private void Update()
+    {
+        
     }
 
     private void OptionClick(ClickEvent evt)
     {
-        if (!uiDocument.enabled) return;
+        if (!dialogBox.visible) return;
         
         Button button = evt.currentTarget as Button;
         int option;
         if (button != null && optionButtons.TryGetValue(button, out option))
         {
+            if (option >= dialogOptions) return;
             CommitOption(option);
         }
     }
 
-    private void DialogTextClick(ClickEvent evt)
+    private void DialogBoxClick(ClickEvent evt)
     {
         OnDialogCommit();
     }
 
     public void CommitOption(int option)
     {
-        if (!uiDocument.enabled || optionButtons.Count == 0) return;
+        if (!dialogBox.visible || dialogOptions == 0) return;
         HideDialog();
         OnDialogOptionClicked.Invoke(option);
     }
 
     public void OnDialogCommit()
     {
-        if (!uiDocument.enabled || optionButtons.Count > 0) return;
+        if (!dialogBox.visible || dialogOptions > 0) return;
         HideDialog();
-        OnDialogCommitted.Invoke();
+        if (OnDialogCommitted != null) OnDialogCommitted.Invoke();
+    }
+
+    public void FadeBlackIn(Action callback, float timeOffset = 0)
+    {
+        fadeBlackCallback = callback;
+
+        fadeBlack.AddToClassList("hidden");
+    }
+    
+    public void FadeBlackOut(Action callback)
+    {
+        fadeBlackCallback = callback;
+
+        fadeBlack.RemoveFromClassList("hidden");
+    }
+
+    private void FadeBlackCallback(TransitionEndEvent evt)
+    {
+        if (fadeBlackCallback != null)
+        {
+            fadeBlackCallback.Invoke();
+            fadeBlackCallback = null;
+        }
     }
     
     [AOT.MonoPInvokeCallback(typeof(FMOD.Studio.EVENT_CALLBACK))]
